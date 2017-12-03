@@ -15,7 +15,15 @@
 		 	
 		  // nav
 
-		  if ( window_top_position > 50 ){ $( '.unav' ).addClass( 'unav-scroll' ); } else { $( '.unav' ).removeClass('unav-scroll'); }
+		  if ( window_top_position > 50 ){ 
+
+		  	$( '.unav' ).addClass( 'unav-scroll' );
+
+
+		  } else { 
+
+		  	$( '.unav' ).removeClass('unav-scroll'); 
+		  }
 
 
 		  $.each($animation_elements, function() {
@@ -37,25 +45,63 @@
 		$window.trigger( 'scroll' );
 
 	    $( '.unav__lang' ).click(function(e) {
+	    	e.preventDefault();
+	        $( '.inter' ).fadeIn();
+
+	    });
+
+	    $( '.inter__x-icon' ).click(function(e) {
+	    	e.preventDefault();
+	        $( '.inter' ).fadeOut();
+
+	    });
+
+	    $( '.inter__lang' ).click(function(e) {
 	    
 	        e.preventDefault();
-	        $( '.unav__lang' ).removeClass( 'active' );
-	        $( this ).addClass( 'active' );
 	        setLang( $( this ).attr('data-id') );
+	        $( '.unav__cur-lang' ).html(  $( this ).html()  );
 
+	    });
+
+	    $( '.unav__button' ).click(function(e) {
+	    	e.preventDefault();
+	        $( '.question' ).fadeIn();
+
+	    });
+
+	    $( '.inter__x-icon' ).click(function(e) {
+	    	e.preventDefault();
+	        $( '.question' ).fadeOut();
+
+	    });
+
+
+	    $( '.unav__toggler' ).click(function(e) {
+	    	e.preventDefault();
+	        $( '.sidebar' ).addClass('active');
+
+	    });
+
+	    $( '.sidebar__x-icon' ).click(function(e) {
+	    	e.preventDefault();
+	        $( '.sidebar' ).removeClass('active');
 
 	    });
 
 
 
+
+
     });
 
-	function setLang( lang){
+	function setLang( lang ){
 
 		$( '.lang' ).each(function( e ) {
 
 		  var lang_key = $( this ).attr( 'data-lang' );
-		  $( this ).html(  dic[lang][lang_key] )
+		  $( this ).html(  dic[lang][lang_key] );
+	      $( '.inter' ).fadeOut();
 
 		});
 	

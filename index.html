@@ -18,22 +18,24 @@
     <nav class="navbar unav fixed-top">
 
       <a class="navbar-brand logo" href="/">
-        <img src="assets/images/logo.png" class="d-inline-block align-top" alt="">
+        <img src="assets/images/logo.png" class="d-inline-block align-top logo-image" alt="">
         <div class="main__motto d-inline-block align-top">
           <div class="main__motto1">U-TECH</div>
           <div class="main__motto2 align-top">We must unite</div>
         </div>
       </a>
 
-      <div class="pull-right">
-          
-        <a href="" class="unav__lang" data-id="en">EN</a>
+      <div class="socials text-center">
+        <a href="#" class="socials_ico"><img src="assets/images/vk-ico-white.png" class="socials__vk"/></a>
+      </div>
 
-        <a href="" class="unav__lang active" data-id="ru">RU</a>
+      <div class="pull-right unav__right-menu">
+          
+        <a href="" class="unav__lang"><span class="unav__cur-lang">Русский</span>&nbsp;<span class="oi oi-chevron-bottom unav__lang-arrow" title="v" aria-hidden="true"></span></a>
 
         <button class="btn btn-sm unav__button lang" data-lang="ask_question">ЗАДАТЬ ВОПРОС</button>
 
-          <button class="navbar-toggler unav__toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler unav__toggler" type="button">
             <span class="oi oi-menu unav__toggler-icon" title="" aria-hidden="true"></span>
           </button>
 
@@ -47,8 +49,10 @@
     <section class="main">
 
       <div class="container main__content">
-
-        <h1 class="main__header text-center">TRANSNET SPACE</h1>
+        <div class="main__blockchain text-center">
+          <span class="lang" data-lang="current_block">Номер текущего блока</span>: 34535983095830945830958309580359
+        </div>
+        <h1 class="main__header text-center">TRANSNET SPACE <span class="main__header-version">v. 0.0.1</span></h1>
 
         <div class="row text-center">     
 
@@ -56,77 +60,6 @@
 
         </div>
 
-        <div class="row main__versions text-center">
-          
-          <ul class="main__versions-ul col-md-8 offset-md-2 col-lg-8 offset-lg-2">
-
-            <div class="row">
-
-              <li class="col-sm-2 col-md-2 col-lg-2 text-right">V 1.0.0.</li>
-              <li class="col-sm-8 col-md-8 col-lg-8">
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="90"
-                  aria-valuemin="0" aria-valuemax="100" style="width:90%">
-                    <span class="sr-only">90% Complete</span>
-                  </div>
-                </div>
-              </li>
-              <li class="col-sm-2 col-md-2 col-lg-2 text-left lang"><a href="#" data-lang="more">подробнее</a></li>
-
-            </div>
-
-
-            <div class="row">
-
-              <li class="col-sm-2 col-md-2 col-lg-2 text-right">V 1.0.1.</li>
-              <li class="col-sm-8 col-md-8 col-lg-8">
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="80"
-                  aria-valuemin="0" aria-valuemax="100" style="width:80%">
-                    <span class="sr-only">80% Complete</span>
-                  </div>
-                </div>
-              </li>
-              <li class="col-sm-2 col-md-2 col-lg-2 text-left lang"><a href="#" data-lang="more">подробнее</a></li>
-
-            </div>
-
-
-            <div class="row">
-
-              <li class="col-sm-2 col-md-2 col-lg-2 text-right">V 1.0.2.</li>
-              <li class="col-sm-8 col-md-8 col-lg-8">
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="70"
-                  aria-valuemin="0" aria-valuemax="100" style="width:70%">
-                    <span class="sr-only">70% Complete</span>
-                  </div>
-                </div>
-              </li>
-              <li class="col-sm-2 col-md-2 col-lg-2 text-left lang"><a href="#" data-lang="more">подробнее</a></li>
-
-            </div>
-
-
-          </ul>
-
-        </div>
-
-        
-        <div class="row main__versions-progress">
-
-          <div class="col-sm-2 col-md-2 col-lg-2 text-right">V 1.0.2.</div>
-          <div class="col-sm-8 col-md-8 col-lg-8">
-            <div class="progress main__versions-current">
-              <div class="progress-bar" role="progressbar" aria-valuenow="70"
-              aria-valuemin="0" aria-valuemax="100" style="width:70%">
-                <span class="sr-only">70% Complete</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-2 col-md-2 col-lg-2 text-left lang"><a href="#" data-lang="more">подробнее</a></div>
-
-        </div>
 
 
         <div class="row">
@@ -140,7 +73,9 @@
               </div>
 
               <div class="col-sm-12 col-md-4 col-lg-4">
-                <button class="btn main__buttons-btn lang" data-lang="blockchain_signup">зарегистрироваться в блокчейн</button>
+                <form method="GET" action="https://transnet.space">
+                  <button class="btn main__buttons-btn lang" data-lang="blockchain_signup">зарегистрироваться в блокчейн</button>
+                </form>
               </div>
 
               <div class="col-sm-12 col-md-4 col-lg-4">
@@ -269,6 +204,252 @@
       </div>
 
     </section>
+
+    <section class="node">
+
+      <div class="container node__container">
+
+        <div class="row image-block">
+
+          <img src="assets/images/server.gif"/>
+
+          <div class="image-block__hover col-sm-5 col-md-5 node__block-left">
+
+            <h2 class="header2 node__header">ОПИСАНИЕ ОДНОГО УЗЛА ДЕЦЕНТРАЛИЗОВАННОЙ СИСТЕМЫ</h2>
+
+            <ul class="node__list node__list-left">
+              
+              <li class="clearfix"><img src="assets/images/node-ico.png" class="node__ico"/>
+                <h2 class="node__header2">СТАБИЛЬНОСТЬ</h2>
+                <p class="node__subheader">НЕМНОГО СЛОВ ОБ ЭТОМ. НЕМНОГО СЛОВ ОБ ЭТОМ.</p>
+              </li>
+
+              <li class="clearfix"><img src="assets/images/node-ico.png" class="node__ico"/>
+                <h2 class="node__header2">БЕЗОПАСНОСТЬ</h2>
+                <p class="node__subheader">НЕМНОГО СЛОВ ОБ ЭТОМ. НЕМНОГО СЛОВ ОБ ЭТОМ.</p>
+              </li>
+
+
+            </ul>
+            
+
+          </div>
+
+          <div class="image-block__hover col-sm-4 col-md-4 node__block-right">
+
+            <ul class="node__list node__list-left">
+
+              <li class="clearfix"><img src="assets/images/node-ico.png" class="node__ico"/>
+                <h2 class="node__header2">ПРОЗРАЧНОСТЬ</h2>
+                <p class="node__subheader">НЕМНОГО СЛОВ ОБ ЭТОМ. НЕМНОГО СЛОВ ОБ ЭТОМ.</p>
+              </li>
+        
+              <li class="clearfix"><img src="assets/images/node-ico.png" class="node__ico"/>
+                <h2 class="node__header2">СТАБИЛЬНОСТЬ</h2>
+                <p class="node__subheader">НЕМНОГО СЛОВ ОБ ЭТОМ. НЕМНОГО СЛОВ ОБ ЭТОМ.</p>
+              </li>
+
+              <li class="clearfix"><img src="assets/images/node-ico.png" class="node__ico"/>
+                <h2 class="node__header2">БЕЗОПАСНОСТЬ</h2>
+                <p class="node__subheader">НЕМНОГО СЛОВ ОБ ЭТОМ. НЕМНОГО СЛОВ ОБ ЭТОМ.</p>
+              </li>
+
+              <li class="clearfix"><img src="assets/images/node-ico.png" class="node__ico"/>
+                <h2 class="node__header2">ПРОЗРАЧНОСТЬ</h2>
+                <p class="node__subheader">НЕМНОГО СЛОВ ОБ ЭТОМ. НЕМНОГО СЛОВ ОБ ЭТОМ.</p>
+              </li>
+
+            </ul>
+            
+
+          </div>
+
+
+        </div>
+        
+      </div>
+
+    </section>
+
+    <!-- sidebar -->
+
+    <div class="sidebar">
+        
+        <div class="navbar sidebar__navbar">
+
+          <div class="pull-left">
+              <img src="assets/images/logo-bar.png" class="sidebar__logo"/><a href="" class="sidebar__header lang" data-lang="home">ГЛАВНАЯ</a>
+          </div>
+          <div class="pull-right">
+            <span class="oi oi-x sidebar__x-icon" title="" aria-hidden="true"></span>
+          </div>
+
+          <ul class="sidebar__menu">
+
+            <li><a href="#"><img src="assets/images/settings-ico.png" class="sidebar__menu-ico"><span class="lang" data-lang="how_it_works">КАК ВСЁ РАБОТАЕТ</span></a></li>
+
+            <li><a href="#"><img src="assets/images/settings-ico.png" class="sidebar__menu-ico">TRANSNET.SPACE</a></li>
+
+            <li><a href="#"><img src="assets/images/settings-ico.png" class="sidebar__menu-ico"><span class="lang" data-lang="our_mission">НАША МИССИЯ</span></a></li>
+
+            <li><a href="#"><img src="assets/images/settings-ico.png" class="sidebar__menu-ico"><span class="lang" data-lang="team_and_advisers">КОМАНДА И АДВАЙСЕРЫ</span></a></li>
+
+            <li><a href="#"><img src="assets/images/settings-ico.png" class="sidebar__menu-ico"><span class="lang" data-lang="partners">ПАРТНЁРЫ</span></a></li>
+
+            <li><a href="#"><img src="assets/images/settings-ico.png" class="sidebar__menu-ico"><span class="lang" data-lang="events_and_news">СОБЫТИЯ И НОВОСТИ</span></a></li>
+
+            <li><a href="#"><img src="assets/images/settings-ico.png" class="sidebar__menu-ico"><span class="lang" data-lang="press_about_us">СМИ О НАС</span></a></li>
+
+            <li><a href="#"><img src="assets/images/settings-ico.png" class="sidebar__menu-ico"><span class="lang" data-lang="contacts">КОНТАКТЫ</span></a></li>
+
+
+          </ul>
+
+        </div>      
+
+
+    </div>
+
+    <!-- ask question -->
+
+    <div class="question">
+
+      <div class="navbar inter__nav">
+
+        <a class="navbar-brand logo" href="/">
+          <img src="assets/images/logo-bw.png" class="d-inline-block align-top logo-image" alt="">
+          <div class="main__motto d-inline-block align-top">
+            <div class="main__motto1 inter__motto1">U-TECH</div>
+            <div class="main__motto2 inter__motto2 align-top">We must unite</div>
+          </div>
+        </a>
+
+        <div class="pull-right">
+          <span class="oi oi-x inter__x-icon" title="" aria-hidden="true"></span>
+        </div>
+
+      </div>
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-xs-8 offset-xs-2 col-sm-8 offset-sm-2 col-md-8 offset-md-2 col-lg-8 offset-lg-2">
+        
+            <h2 class="header2 question__header lang" data-lang="ask_question">ЗАДАТЬ ВОПРОС</h2>  
+
+          </div>
+
+          <div class="col-xs-8 offset-xs-2 col-sm-8 offset-sm-2 col-md-8 offset-md-2 col-lg-8 offset-lg-2">
+        
+            <input class="question__input" type="text" placeholder="Как к Вам обращаться?*" />
+
+          </div>
+
+          <div class="col-xs-4 offset-xs-2 col-sm-4 offset-sm-2 col-md-4 offset-md-2 col-lg-4 offset-lg-2">
+        
+            <input class="question__input" type="text" placeholder="Ваша почта?*" />
+
+          </div>
+
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        
+            <input class="question__input" type="text" placeholder="Ваш телефон?*" />
+
+          </div>
+
+          <div class="col-xs-8 offset-xs-2 col-sm-8 offset-sm-2 col-md-8 offset-md-2 col-lg-8 offset-lg-2">
+        
+            <textarea class="question__area" placeholder="Введите сообщение*"></textarea>
+            <button class="btn question__send-btn lang" data-lang="blockchain_signup">ОТПРАВИТЬ</button>
+
+          </div>
+
+        </div>  
+
+      </div>
+
+    </div>
+
+    <!-- international -->
+
+    <div class="inter">
+
+      <div class="navbar inter__nav">
+
+        <a class="navbar-brand logo" href="/">
+          <img src="assets/images/logo-bw.png" class="d-inline-block align-top logo-image" alt="">
+          <div class="main__motto d-inline-block align-top">
+            <div class="main__motto1 inter__motto1">U-TECH</div>
+            <div class="main__motto2 inter__motto2 align-top">We must unite</div>
+          </div>
+        </a>
+
+        <div class="pull-right">
+          <span class="oi oi-x inter__x-icon" title="" aria-hidden="true"></span>
+        </div>
+
+      </div>
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-xs-8 offset-xs-2 col-sm-8 offset-sm-2 col-md-8 offset-md-2 col-lg-8 offset-lg-2">
+        
+            <h2 class="header2 inter__header lang" data-lang="choose_language">ВЫБЕРИТЕ СВОЙ ЯЗЫК</h2>  
+
+          </div>
+
+          <div class="col-xs-8 offset-xs-2 col-sm-8 offset-sm-2 col-md-8 offset-md-2 col-lg-8 offset-lg-2">
+        
+            <h6 class="inter__region">EUROPE AND RUSSIAN FEDERATION</h6>  
+
+          </div>
+
+          <div class="col-md-3 offset-md-2">
+            <span class="flag flag-en"></span> <a href="" class="inter__lang" data-id="en">English</a>
+          </div>
+
+          <div class="col-md-3">
+           <span class="flag flag-ru"></span> <a href="" class="inter__lang" data-id="ru">Русский</a>
+          </div>
+    
+          <div class="col-md-3">
+            <span class="flag flag-en"></span> <a href="" class="inter__lang" data-id="en">English</a>
+          </div>
+
+          <div class="col-md-3 offset-md-2">
+            <span class="flag flag-en"></span> <a href="" class="inter__lang" data-id="en">English</a>
+          </div>
+
+          <div class="col-md-3">
+           <span class="flag flag-ru"></span> <a href="" class="inter__lang" data-id="ru">Русский</a>
+          </div>
+    
+          <div class="col-md-3">
+            <span class="flag flag-en"></span> <a href="" class="inter__lang" data-id="en">English</a>
+          </div>
+
+          <div class="col-md-3 offset-md-2">
+            <span class="flag flag-en"></span> <a href="" class="inter__lang" data-id="en">English</a>
+          </div>
+
+          <div class="col-md-3">
+           <span class="flag flag-ru"></span> <a href="" class="inter__lang" data-id="ru">Русский</a>
+          </div>
+    
+          <div class="col-md-3">
+            <span class="flag flag-en"></span> <a href="" class="inter__lang" data-id="en">English</a>
+          </div>
+
+
+
+      </div>
+
+
+      
+    </div>
 
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
