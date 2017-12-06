@@ -1,6 +1,8 @@
 (function($) {
  
 	$( document ).ready(function() {
+
+		setTimeout(getBlocks, 1000);
         
 		var $animation_elements = $('.animation-element');
 		var $window = $(window);
@@ -46,6 +48,7 @@
 
 	    $( '.unav__lang' ).click(function(e) {
 	    	e.preventDefault();
+	    	$( '.sidebar' ).removeClass('active');
 	        $( '.inter' ).fadeIn();
 
 	    });
@@ -70,7 +73,7 @@
 
 	    });
 
-	    $( '.inter__x-icon' ).click(function(e) {
+	    $( '.ask__x-icon' ).click(function(e) {
 	    	e.preventDefault();
 	        $( '.question' ).fadeOut();
 
@@ -79,6 +82,10 @@
 
 	    $( '.unav__toggler' ).click(function(e) {
 	    	e.preventDefault();
+	    	var $window = $(window);
+	    	var window_top_position = $window.scrollTop();
+
+	    	if ( window_top_position > 50 ){ $( '.unav' ).removeClass('unav-scroll'); }
 	        $( '.sidebar' ).addClass('active');
 
 	    });
@@ -88,6 +95,10 @@
 	        $( '.sidebar' ).removeClass('active');
 
 	    });
+
+	    $( ".sidebar" ).mouseleave(function() {
+		   $( '.sidebar' ).removeClass('active');
+		});
 
 
 
@@ -105,6 +116,54 @@
 
 		});
 	
+
+	}
+
+	function getBlocks(){
+
+		$.ajax({
+		    crossDomain: true,
+		    dataType: 'json',
+		    url: 'http://188.166.90.74:8000/get_current_block_num',
+		    contentType: "application/json",
+		    data: JSON.stringify( {
+		    	is_testnet: true,
+		    	owner_wif: '5JGu6HGDReuT8esoSznB43StL7ZqJKnEkn5vhDrz1QC8CUUcRFA' 
+		    }),
+		      headers: {
+		         "Access-Control-Allow-Origin": "*",
+		         "Access-Control-Allow-Methods": "*",
+		         "Access-Control-Allow-Headers": "*"
+		      },
+            type: 'POST',
+            success: function(data){
+
+            	$('.main__blockchain-number').html( data['current_block_num'] );
+            }
+		});
+
+/*
+		var XHR = ("onload" in new XMLHttpRequest()) ? XMLHttpRequest : XDomainRequest;
+
+		var xhr = new XHR();
+
+		// (2) запрос на другой домен :)
+		xhr.open('POST', 'http://188.166.90.74:8000/get_current_block_num', true);
+
+		xhr.setRequestHeader('Content-Type', 'application/json')
+		xhr.setRequestHeader('Access-Control-Allow-Origin', '*')
+
+		xhr.onload = function() {
+		  //alert( this.responseText );
+		}
+
+		xhr.onerror = function() {
+		  //alert( 'Ошибка ' + this.status );
+		}
+
+		xhr.send();
+
+*/
 
 	}
 
