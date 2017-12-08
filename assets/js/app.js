@@ -3,9 +3,12 @@
 	$( document ).ready(function() {
 
 		setTimeout(getBlocks, 1000);
-        
+
+        var body_position = $('body').css('top');
 		var $animation_elements = $('.animation-element');
 		var $window = $(window);
+		    
+
 
 		$window.on( 'scroll', check_if_in_view );
 
@@ -85,24 +88,24 @@
 	    	var $window = $(window);
 	    	var window_top_position = $window.scrollTop();
 
-	    	if ( window_top_position > 50 ){ $( '.unav' ).removeClass('unav-scroll'); }
-	        $( '.sidebar' ).addClass('active');
+	    	if ( $( this ).hasClass('open') ){
+
+	    		$( this ).removeClass('open');
+	    		$( 'body' ).removeClass('modal-one');
+	    		$( '.sidebar' ).fadeOut(600);
+	    		$( '.unav' ).css('top', '0');
+
+               // $( '.unav' ).fadeIn();
+
+	    	} else {
+
+	    		$( this ).addClass('open');
+	    		$( 'body' ).addClass('modal-one');
+	    		$( '.unav' ).css('top', '-200px');
+                $( '.sidebar' ).fadeIn(800);
+	    	}
 
 	    });
-
-	    $( '.sidebar__x-icon' ).click(function(e) {
-	    	e.preventDefault();
-	        $( '.sidebar' ).removeClass('active');
-
-	    });
-
-	    $( ".sidebar" ).mouseleave(function() {
-		   $( '.sidebar' ).removeClass('active');
-		});
-
-
-
-
 
     });
 

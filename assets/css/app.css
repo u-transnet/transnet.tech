@@ -8,11 +8,35 @@
     font-style: normal;
 }
 
+html {
+  overflow:   scroll;
+}
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0;
+}
+
 body, html {
 	width: 100%;
 	height: 100%;
     font-family: 'Roboto', sans-serif;
+    font-weight: 100;
     position: relative;
+      -webkit-animation-delay: 0.1s;
+    -webkit-animation-name: fontfix;
+    -webkit-animation-duration: 0.1s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes fontfix {
+    from { opacity: 1; }
+    to   { opacity: 1; }
+}
+
+.modal-one {
+
+
 }
 
 
@@ -20,16 +44,20 @@ body, html {
 	color: #fff;
 }
 
+.logo-image {
+    display: inline-block;
+}
+
 .header {
-	font-family: 'Russo Sans';
-	font-size: 2rem;
-	padding-top: 5rem;
+    font-family: 'Russo Sans';
+    font-size: 3rem;
+    padding-top: 4.6rem;
 }
 
 .header2 {
 	font-family: 'Russo Sans';
-	font-size: 1.6rem;
-	padding-top: 4rem;
+	font-size: 2rem;
+	padding-top: 1rem;
 }
 
 .subheader {
@@ -37,7 +65,7 @@ body, html {
 }
 
 .unav {
-	padding: .5rem 2rem .5rem 2rem;
+	padding: 2.1rem 2rem .5rem 2.7rem;
 	-webkit-transition: background-color 1s ease;
 	-moz-transition: background-color 1s ease;
 	-ms-transition: background-color 1s ease;
@@ -48,14 +76,22 @@ body, html {
 .unav-scroll {
 	background: rgba(255,255,255,.96);
 	color: #000;
-	padding: 0 2rem 0 2rem;
-	box-shadow: 0 0 20px #555;
+	padding: 1rem 2rem 1rem 2rem;
+	box-shadow: 0 3px 5px -3px rgba(0, 0, 0, 0.5)
 }
 
 .unav-scroll .logo-image {
-	content: url('../images/logo-bw.png'); 
-	width: 32px;
-	padding-top: 5px;
+	display: none;
+}
+
+.unav-scroll .logo-image_ {
+	display: block;
+	width: 148px;
+	float: left;
+}
+
+.logo-image_ {
+	display: none;
 }
 
 .unav-scoll .main__motto1 {
@@ -79,27 +115,39 @@ body, html {
 	position: absolute;
 	left: 50%;
 	right: 50%;
-	width: 300px;
-	top: 2.4rem;
+	width: 360px;
+	top: 4.4rem;
 	margin-left: -150px;
 
 }
 
 .socials_ico {
-	margin: 0 2px 0 2px;
+	margin: 0 3px 0 3px;
+	text-decoration: none;
+ 
+}
+
+.socials_ico:hover {
+	text-decoration: none;
 }
 
 .socials_ico:hover svg {
 	fill: #ddd;
 }
 
-.unav-scroll .socials_ico:hover svg {
-	fill: #444;
-}
 
 .socials_ico svg {
-	width: 32px;
+	width: 34px;
 	fill: #fff;
+   -moz-transition: all .5s ease-in;
+    -o-transition: all .5s ease-in;
+    -webkit-transition: all .5s ease-in;
+    transition: all .5s ease-in;
+}
+
+.unav-scroll .socials_ico:hover svg {
+	fill: #444;
+
 }
 
 .unav-scroll .socials {
@@ -116,13 +164,125 @@ body, html {
 }
 
 .unav__button {
-	background: transparent;
-	border: 1px solid #fff;
-	border-radius: 20px;
-	padding: .6rem 1.25rem;
-	font-family: 'Russo Sans';
-	color: #fff;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 3px 0 0 2px;
+    font-family: 'Russo Sans';
+    font-size: 1rem;
+    color: #fff;
+    width: 219px;
+    height: 40px;
+    cursor: pointer;
+    margin: 2px 28px 0 20px;
+    float: right;
+}
+
+
+.unav__toggler {
+	width: 35px;
+	height: 35px;
+    z-index: 1050;
+	top: 265px;
+	right: 23px;
+	float: right;
+	margin: 10px 14px 0 0;
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+	-webkit-transition: .5s ease-in-out;
+	-moz-transition: .5s ease-in-out;
+	-o-transition: .5s ease-in-out;
+	transition: .5s ease-in-out;
 	cursor: pointer;
+}
+
+.unav__toggler.open {
+	position: absolute;	
+}
+
+.unave__toggler .active span {
+	background-color: #000;
+}
+
+
+.unav__toggler:hover {
+	cursor: pointer;
+}
+
+
+
+.unav__toggler span {
+	display: block;
+	position: absolute;
+	height: 2px;
+	width: 100%;
+	background: #fff;
+	border-radius: 9px;
+	opacity: 1;
+	left: 0;
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+	-webkit-transition: .25s ease-in-out;
+	-moz-transition: .25s ease-in-out;
+	-o-transition: .25s ease-in-out;
+	transition: .25s ease-in-out;
+}
+
+
+.unav__toggler span:nth-child(1) {
+	top: 0px;
+	-webkit-transform-origin: left center;
+	-moz-transform-origin: left center;
+	-o-transform-origin: left center;
+	transform-origin: left center;
+}
+
+.unav__toggler span:nth-child(2) {
+	top: 8px;
+	-webkit-transform-origin: left center;
+	-moz-transform-origin: left center;
+	-o-transform-origin: left center;
+	transform-origin: left center;
+}
+
+.unav__toggler span:nth-child(3) {
+	top: 16px;
+	-webkit-transform-origin: left center;
+	-moz-transform-origin: left center;
+	-o-transform-origin: left center;
+	transform-origin: left center;
+}
+
+.unav__toggler.open span:nth-child(1) {
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+	top: -4px;
+	left: 1px;
+	background-color: #000;
+	width: 35px;
+	background-color: #000;
+}
+
+.unav__toggler.open span:nth-child(2) {
+	width: 0%;
+	opacity: 0;
+}
+
+.unav__toggler.open span:nth-child(3) {
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	top: 21px;
+	left: 1px;
+	width: 35px;
+	background-color: #000;
 }
 
 .unav__button:hover {
@@ -133,10 +293,28 @@ body, html {
 	background: rgba(0,0,0,.1);
 }
 
+.unav-scroll .unav__toggler span {
+	background-color: #000;
+}
+
 .unav__lang {
-	color: #fff;
-	margin-right: 1rem;
-	text-decoration: underline;
+    color: #fff;
+    margin: 13px 0 0 0;
+    text-decoration: underline;
+    float: right;
+    font-size: .9rem;
+    letter-spacing: .5px;
+}
+
+.unav__lang svg {
+	width: 16px;
+	margin: 2px 5px 0 0;
+	float: left;
+	fill: #fff;
+}
+
+.unav-scroll .unav__lang svg {
+	fill: #000;
 }
 
 .unav__lang-arrow {
@@ -144,30 +322,7 @@ body, html {
 	font-size: .6rem;
 }
 
-.unav__toggler {
-	position: relative;
-	margin-left: 14px;
-	width: 50px;
-	height: 50px;
-}
 
-.unav__toggler span {
-	display: block;
-}
-
-
-.unav__toggler:hover {
-	cursor: pointer;
-}
-
-.unav__toggler-icon {
-	position: absolute;
-	color: #fff;
-	right: 0;
-	left: 0;
-	font-size: 2rem;
-	padding-top: 3px;
-}
 
 .main__motto1 {
 	font-family: 'Russo Sans';
@@ -176,45 +331,57 @@ body, html {
 	padding-top: 10px;
 }
 
-.main__motto2 {
-	font-family: 'Russo Sans';
-	font-size: 1rem;
-	letter-spacing: 1px;
-}
 
 .main {
-	color: #fff;
-	padding-top: 165px;
-	height: 100%;
+    color: #fff;
+    padding-top: 262px;
+    height: 1340px;
 	width: 100%;
 	background: rgb(30,185,183);
-	background: -moz-linear-gradient(top,  rgba(44,119,150,1) 0%, rgba(30,185,183,1) 100%);
-	background: -webkit-linear-gradient(top,  rgba(44,119,150,1) 0%,rgba(30,185,183,1) 100%); 
-	background: linear-gradient(to bottom,  rgba(44,119,150,1) 0%,rgba(30,185,183,1) 100%);
+	background: -moz-linear-gradient(top,  rgba(44,119,150,1) 45%, rgba(30,185,183,1) 100%);
+	background: -webkit-linear-gradient(top,  rgba(44,119,150,1) 45%,rgba(30,185,183,1) 100%); 
+	background: linear-gradient(to bottom,  rgba(44,119,150,1) 45%,rgba(30,185,183,1) 100%);
+}
+
+.main__bg {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+    background-image: url(../images/tablet.png);
+    background-position: 260px 100%;
+    background-repeat: no-repeat;
 }
 
 .main__content {
-	height: 100%;
-	background-image: url('../images/tablet.png');
-	background-size: 118%;
-	background-position: 0% 100%;
-	background-repeat: no-repeat;
+    height: 100%;
+
 }
 
 .main__blockchain {
-	font-size: .9rem;
-	font-weight: bold;
+	font-size: 1rem;
 	color: #d3e9ef;
+    font-family: 'Russo Sans';
+
 }
 
+.main__blockchain-number {
+    font-size: 1.35rem;
+    border-bottom: 1px solid #d3e9ef;
+    margin-left: 4px;
+    letter-spacing: 1px;
+}
 
 .main__header {
-	font-size: 5rem;
-	font-family: 'Russo Sans';
+    font-size: 5rem;
+    font-family: 'Russo Sans';
+    letter-spacing: 0px;
+    margin: 2px 0 0 16px;
 }
 
 .main__header-version {
-	font-size: 2rem;
+    font-size: 2.5rem;
+    margin-left: 4px;
 }
 
 .main__header-mobversion, .works2__git, .works2__mobile, .principe__token, .image-mobile, .sidebar__mobile, .mobile {
@@ -223,12 +390,18 @@ body, html {
 
 .main__subheader {
     color: #d3e9ef;
-    font-size: 1.4rem;
+    font-size: 1.732rem;
+    letter-spacing: .2px;
+    color: #d3e9ef;
+    font-size: 1.732rem;
+    margin: 11px -15px 0 -15px;
+    line-height: 2.4rem;
+
 }
 
 
 .main__buttons {
-	margin: 105px 0;
+	margin: 140px 0;
 }
 
 .main__buttons-btn {
@@ -236,7 +409,7 @@ body, html {
 	border: 1px solid #fff;
 	border-radius: 50px;
 	font-size: .6rem;
-	padding: 1.1rem 1.25rem;
+	height: 46px;
 	font-family: 'Russo Sans';
 	color: #003850;
 	cursor: pointer;
@@ -247,10 +420,19 @@ body, html {
 	background: rgba(255,255,255,.75);
 }
 
+.works {
+	background-color: #f5f5f5;
+}
+
+.works__header2 {
+	padding: 15px;
+	margin-bottom: 20px;
+}
+
 .works__img {
 	height: 450px;
 	width: 100%;
-	margin: 50px 0 0 0;
+    padding: 20px 10px 10px 25px;
 }
 
 .works__img1 {
@@ -261,8 +443,12 @@ body, html {
 	float: left;
 }
 
-.works h2 {
-	margin-bottom: 30px;
+.works2 {
+	padding-top: 90px
+}
+
+.works2__header {
+	font-size: 1.5rem;
 }
 
 .works2__scheme {
@@ -293,7 +479,7 @@ body, html {
 }
 
 .principe__header2 {
-    padding-top: 3rem;
+    padding-top: 1.5rem;
 }
 
 
@@ -307,6 +493,10 @@ body, html {
 	right:0;
 	left: auto;
 	padding-left: 30px;
+}
+
+.node__block-left {
+	padding-top: 40px;
 }
 
 .node__header {
@@ -335,6 +525,8 @@ body, html {
     font-size: .7rem;
  }
 
+
+
 img.node__ico {
 	width: 60px;
 	height: 60px;
@@ -359,7 +551,7 @@ img.node__ico {
 	padding: 5px 2rem 10px 2rem;
 }
 
-.inter__motto1, .inter__motto2 {
+.inter__motto1 {
 	color: #000;
 }
 
@@ -417,17 +609,19 @@ a.inter__lang:hover {
 	height: 100%;
 	min-height: 100%;
 	position: fixed;
-	width: 420px;
-	z-index: 11000;
-	right: -420px;
+	width: 418px;
+	z-index: 999;
+	right: 0;
+	display: none;
 	top:0;
-	padding-top: 30px;
+	padding-top: 73px;
 	-webkit-transition: right .5s ease-out .3s;
 	-moz-transition: right .5s ease-out .3s;
 	-ms-transition: right .5s ease-out .3s;
 	-o-transition: right .5s ease-out .3s;
 	transition: right .5s ease-out .3s;
 	overflow: hidden;
+	box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5)
 }
 
 .sidebar__wrapper {
@@ -439,13 +633,9 @@ a.inter__lang:hover {
 	padding: 0 0 20px 0;
 }
 
-.sidebar.active {
-	right: 0;
-}
-
 .sidebar__logo {
 	float: left;
-	margin-left: 26px;
+	margin-left: 52px;
 }
 
 .sidebar__x-icon {
@@ -462,11 +652,12 @@ a.inter__lang:hover {
 }
 
 a.sidebar__header {
-	color: #2c95c3;
-	font-size: 1.5rem;
-	font-family: 'Russo Sans';
-	margin: -3px 0 0 15px;
-	float: left;
+    color: #2c95c3;
+    font-size: 1.45rem;
+    font-family: 'Russo Sans';
+    margin: -2px 0 27px 13px;
+    float: left;
+    letter-spacing: .7px;
 }
 
 a.sidebar__header:hover {
@@ -484,7 +675,7 @@ a.sidebar__header:hover {
 }
 
 .sidebar__menu li {
-	height: 88px;
+	height: 72px;
 	border-top: 1px solid #dbe0e1;
 }
 
@@ -496,19 +687,25 @@ a.sidebar__header:hover {
 }
 
 .sidebar__menu-icon {
-	width: 28px;
+	width: 30px;
 	float: left;
-	margin-right: 10px;
+	margin-right: 16px;
 }
 
 .sidebar__menu li a {
 	width: 100%;
-	padding: 30px 20px 0 25px;
+    padding: 21px 20px 0 49px;
 	font-size: 1.1rem;
 	font-family: 'Russo Sans';
 	color: #000;
 	float: left;
 	display: block;
+}
+
+.sidebar__menu .lang {
+    padding: 4px 0 0 1px;
+    float: left;
+    letter-spacing: .3px;
 }
 
 .sidebar__menu li:hover a {
@@ -575,16 +772,12 @@ a.sidebar__header:hover {
 @media screen and (max-width: 1280px){
 
 	.logo img {
-		width: 48px;
+		width: 148px;
 	}
 
 	.main__motto1 {
 		font-size: 1.7rem;
 		padding-top: 0;
-	}
-
-	.main__motto2 {
-		font-size: .6em;
 	}
 
 	.main {
@@ -621,10 +814,6 @@ a.sidebar__header:hover {
 	}
 
 	.sidebar {
-		width: 320px;
-		z-index: 11000;
-		right: -320px;
-		padding-top: 20px;
 
 	}
 
@@ -642,11 +831,19 @@ a.sidebar__header:hover {
 	}
 
 	.socials {
-	    top: 1.7rem;
+	    top: 3.5rem;
+    }
+
+    .socials_ico {
+        margin: 0 3px 0 3px;
+    }
+
+    .socials_ico svg, .unav-scroll .socials_ico svg {
+        width: 20px;
     }
 
 	.unav-scroll .socials {
-		top: 1rem;
+		top: 2.5rem;
 	}
 
 }
@@ -689,7 +886,7 @@ a.sidebar__header:hover {
 	    height: 150%;
 	}
 
-    .main__motto2, .unav__button, .desktop, .main__blockchain, .main__header-version, .works2__image, .principe__image {
+    .unav__button, .desktop, .main__blockchain, .main__header-version, .works2__image, .principe__image {
     	display: none;
     }
 
