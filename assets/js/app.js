@@ -70,7 +70,7 @@
 
 	    });
 
-	    $( '.unav__button' ).click(function(e) {
+	    $( '.unav__button, .unav__button-mobile ' ).click(function(e) {
 	    	e.preventDefault();
 	        $( '.question' ).fadeIn();
 
@@ -94,8 +94,6 @@
 	    		$( 'body' ).removeClass('modal-one');
 	    		$( '.sidebar' ).fadeOut(600);
 	    		$( '.unav' ).css('top', '0');
-
-               // $( '.unav' ).fadeIn();
 
 	    	} else {
 

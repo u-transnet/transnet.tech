@@ -34,6 +34,10 @@ body, html {
     to   { opacity: 1; }
 }
 
+section {
+	position: relative;
+}
+
 .modal-one {
 
 
@@ -46,6 +50,10 @@ body, html {
 
 .logo-image {
     display: inline-block;
+}
+
+.logo-mobile {
+	display: none;
 }
 
 .header {
@@ -76,7 +84,6 @@ body, html {
 .unav-scroll {
 	background: rgba(255,255,255,.96);
 	color: #000;
-	padding: 1rem 2rem 1rem 2rem;
 	box-shadow: 0 3px 5px -3px rgba(0, 0, 0, 0.5)
 }
 
@@ -86,7 +93,6 @@ body, html {
 
 .unav-scroll .logo-image_ {
 	display: block;
-	width: 148px;
 	float: left;
 }
 
@@ -94,21 +100,12 @@ body, html {
 	display: none;
 }
 
-.unav-scoll .main__motto1 {
-	font-size: 1.4em;
-}
-
 .unav-scroll a, .unav-scroll a:hover, .unav-scroll .unav__toggler-icon, .unav-scroll .unav__button {
 	color: #000;
 }
 
-.unav-scroll .unav__right-menu {
-	padding-top: 5px;
-}
-
 .unav-scroll .unav__button {
     border: 1px solid #000;
-    padding: .4rem 1rem;
 }
 
 .socials {
@@ -150,26 +147,26 @@ body, html {
 
 }
 
-.unav-scroll .socials {
-	top: 2rem;
-}
 
 .unav-scroll .socials_ico svg {
 	fill: #000;
-	width: 28px;
 }
 
 .unav, .main_motto1:hover {
 	color: #fff;
 }
 
-.unav__button {
-    background: transparent;
-    border: 1px solid #fff;
+.btn {
+    border: 1px solid #000;
     border-radius: 5px;
     padding: 3px 0 0 2px;
     font-family: 'Russo Sans';
     font-size: 1rem;
+}
+
+.unav__button {
+    background: transparent;
+    border: 1px solid #fff;
     color: #fff;
     width: 219px;
     height: 40px;
@@ -183,8 +180,8 @@ body, html {
 	width: 35px;
 	height: 35px;
     z-index: 1050;
-	top: 265px;
-	right: 23px;
+	top: 260px;
+	right: 29px;
 	float: right;
 	margin: 10px 14px 0 0;
 	-webkit-transform: rotate(0deg);
@@ -262,8 +259,8 @@ body, html {
 	-moz-transform: rotate(45deg);
 	-o-transform: rotate(45deg);
 	transform: rotate(45deg);
-	top: -4px;
-	left: 1px;
+	top: 0px;
+	left: 0px;
 	background-color: #000;
 	width: 35px;
 	background-color: #000;
@@ -279,8 +276,8 @@ body, html {
 	-moz-transform: rotate(-45deg);
 	-o-transform: rotate(-45deg);
 	transform: rotate(-45deg);
-	top: 21px;
-	left: 1px;
+	top: 25px;
+	left: 0px;
 	width: 35px;
 	background-color: #000;
 }
@@ -304,6 +301,7 @@ body, html {
     float: right;
     font-size: .9rem;
     letter-spacing: .5px;
+    font-family: 'Russo Sans';
 }
 
 .unav__lang svg {
@@ -388,6 +386,10 @@ body, html {
     display: none;
 }
 
+.image-mobile {
+	margin-top: 10px;
+}
+
 .main__subheader {
     color: #d3e9ef;
     font-size: 1.732rem;
@@ -405,19 +407,26 @@ body, html {
 }
 
 .main__buttons-btn {
-	background-color: #fff;
+	background: rgba(255,255,255,.3);
 	border: 1px solid #fff;
-	border-radius: 50px;
-	font-size: .6rem;
+	font-size: .7rem;
 	height: 46px;
-	font-family: 'Russo Sans';
-	color: #003850;
+	color: #fff;
 	cursor: pointer;
 	width: 100%;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5)
 }
 
 .main__buttons-btn:hover {
 	background: rgba(255,255,255,.75);
+}
+
+.arrow {
+	position: absolute;
+	width: 50px;
+	left: 50%;
+	margin: -25px 0 0 -25px;
+	top: 0;
 }
 
 .works {
@@ -514,7 +523,7 @@ body, html {
 }
 
 .node__list-left {
-	margin-top: 60px;
+	margin: 30px 0 0 -20px;
 }
 
 .node__header2 {
@@ -525,13 +534,26 @@ body, html {
     font-size: .7rem;
  }
 
+.node__adv {
+	padding: 10px 10px 5px 10px;
+	margin: 0 0 0;
+	-webkit-transition: background-color .85s ease;
+	-moz-transition: background-color .85s ease;
+	-ms-transition: background-color .85s ease;
+	-o-transition: background-color .85s ease;
+	transition: background-color .85s ease;
+	border-radius: 5px;
+}
 
+.node__adv:hover {
+	background-color: #eee;
+	cursor: pointer;
+}
 
 img.node__ico {
 	width: 60px;
 	height: 60px;
-	float: left;
-	margin: 0 20px 20px 0;
+	margin-bottom: 5px;
 }
 
 
@@ -548,7 +570,7 @@ img.node__ico {
 }
 
 .inter__nav {
-	padding: 5px 2rem 10px 2rem;
+    padding:34px 48px 52px 46px;
 }
 
 .inter__motto1 {
@@ -556,7 +578,7 @@ img.node__ico {
 }
 
 .inter__x-icon svg {
-	width: 20px;
+	width: 30px;
 }
 
 .inter__x-icon:hover {
@@ -569,7 +591,8 @@ img.node__ico {
 a.inter__lang {
 	text-decoration: underline;
 	color: #555;
-	font-size: 1rem;
+	font-size: .9rem;
+    font-family: 'Russo Sans';
 }
 
 a.inter__lang:hover {
@@ -614,7 +637,7 @@ a.inter__lang:hover {
 	right: 0;
 	display: none;
 	top:0;
-	padding-top: 73px;
+	padding-top: 71px;
 	-webkit-transition: right .5s ease-out .3s;
 	-moz-transition: right .5s ease-out .3s;
 	-ms-transition: right .5s ease-out .3s;
@@ -737,15 +760,24 @@ a.sidebar__header:hover {
     height: 170px;
 }
 
-.blue-btn {
+.reg-btn {
 	color: #fff;
-	padding: .4rem 2rem .4rem 2rem;
-	border-radius: 20px;
+	padding: .7rem 3rem .7rem 3rem;
+	border-radius: 5px;
 	font-family: 'Russo Sans';
-	background: rgb(30,185,183);
-	background: -moz-linear-gradient(top,  rgba(44,119,150,1) 0%, rgba(30,185,183,1) 100%);
-	background: -webkit-linear-gradient(top,  rgba(44,119,150,1) 0%,rgba(30,185,183,1) 100%); 
-	background: linear-gradient(to bottom,  rgba(44,119,150,1) 0%,rgba(30,185,183,1) 100%);
+	background: rgb(32,185,183);
+	border: 0;
+	margin: 1rem 0 1rem 0;
+}
+
+.blue-btn {
+	background-color: #256a94;
+}
+
+.mobile-link {
+	color: #20b5ba;
+	font-weight: bold;
+	text-decoration: underline;
 }
 
 .question__send-btn:hover {
@@ -758,7 +790,7 @@ a.sidebar__header:hover {
 }
 
 .ask__x-icon svg {
-	width: 20px;
+	width: 30px;
 }
 
 .btn-mobile {
@@ -771,6 +803,11 @@ a.sidebar__header:hover {
 
 @media screen and (max-width: 1280px){
 
+	.main__bg {
+		background-size: 86%;
+		background-position: 110% 100%;
+	}
+
 	.logo img {
 		width: 148px;
 	}
@@ -781,8 +818,13 @@ a.sidebar__header:hover {
 	}
 
 	.main {
-		padding-top: 120px;
+		padding-top: 170px;
+		height: 940px;
 	}
+
+	.main__blockchain-number {
+        font-size: 1rem;
+    }
 
 	.main__header {
 		font-size: 3.6rem;
@@ -794,15 +836,16 @@ a.sidebar__header:hover {
 	}
 
 	.main__subheader {
-		font-size: 1.2rem;
+		font-size: 1.1rem;
+		line-height: 2rem;
 	}
 
     .main__buttons {
-	    margin: 70px 0;
+	    margin: 100px 0;
     }
 
-    .main__buttons-btn {
-    	padding: 1rem;
+    .subheader {
+    	font-size: 1.4rem;
     }
 
 	.principe__header2 {
@@ -814,8 +857,13 @@ a.sidebar__header:hover {
 	}
 
 	.sidebar {
-
+		padding-top: 38px;
 	}
+
+	.sidebar__navbar {
+	    padding: 0;
+	}
+
 
 	.sidebar__menu li {
 		height: 68px;
@@ -826,12 +874,16 @@ a.sidebar__header:hover {
 		font-size: 1rem;
 	}
 
+	.inter__nav {
+        padding: 18px 48px 52px 46px;
+    }
+
 	.sidebar__menu-ico {
 		width: 26px;
 	}
 
 	.socials {
-	    top: 3.5rem;
+	    top: 2.5rem;
     }
 
     .socials_ico {
@@ -842,25 +894,60 @@ a.sidebar__header:hover {
         width: 20px;
     }
 
+    .unav {
+    	padding: 1rem 2rem 1rem 2.7rem;
+    }
+
+    .unav__button {
+    	width: 189px;
+    	margin: 8px 28px 0 20px;
+    	font-size: .8rem;
+    }
+
 	.unav-scroll .socials {
 		top: 2.5rem;
 	}
 
+	.btn {
+		font-size: .7rem;
+	}
+
+	.unav__lang {
+		font-size: .75rem;
+		margin: 19px 0 0 0;
+	}
+
+	.unav__toggler {
+		margin: 20px 14px 0 0;
+		top: 218px;
+	}
+
+
+
 }
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1025px){
 
+    .unav__button {
+        width: 149px;
+        margin: 8px 13px 0 10px;
+    }
+
+    .unav__lang {
+        font-size: .6rem;
+    }
+
+    .subheader {
+		font-size: 1.1rem;
+		line-height: 1.4rem;
+    }
 
 	.principe__header {
 		font-size: 1rem;
 	}
 
-	.principe__subheader {
-		font-size: .7rem;
-	}
-
-	.socials {
-		display: none;
+	.socials_ico {
+	    margin: 0 1px 0 1px;
 	}
 
 	.header2 {
@@ -878,7 +965,7 @@ a.sidebar__header:hover {
 }
 
 
-@media screen and (max-width: 640px){
+@media screen and (max-width: 420px){
 
 
 	.main {
@@ -886,17 +973,38 @@ a.sidebar__header:hover {
 	    height: 150%;
 	}
 
+	.main__bg {
+        background-size: 150%;
+        background-position: 30% 100%;
+    }
+
+    .subheader {
+    	padding: 10px;
+    }
+
+	.navbar-brand {
+		width: 150px
+	}
+
     .unav__button, .desktop, .main__blockchain, .main__header-version, .works2__image, .principe__image {
     	display: none;
     }
 
-    .image-mobile, .mobile {
-    	display: block;
+    .unav__button-mobile {
+    	float: right;
+    	margin: 16px 12px 0 0;
     }
 
-    .logo img {
-    	width: 32px;
-    	margin-right: 6px;
+    .socials, .logo-image {
+    	display: none;
+    }
+
+    .logo-mobile {
+    	display: inline-block;
+    }
+
+    .image-mobile, .mobile {
+    	display: block;
     }
 
     .unav-scroll {
@@ -908,7 +1016,20 @@ a.sidebar__header:hover {
     }
 
     .unav__toggler {
-    	float: right;
+    	right: 6px;
+        top: 210px;
+    }
+
+    .unav__lang {
+    	margin: 0;
+    }
+
+    a.unav__lang:hover {
+    	color: #000;
+    }
+
+    .unav__lang svg {
+    	fill: #000;
     }
 
 	.main__header {
@@ -945,6 +1066,7 @@ a.sidebar__header:hover {
 	.main__subheader {
 	    font-size: 1.5rem;
 	    text-align: justify;
+	    line-height: 1.7rem;
 	}
 
 	.main__content {
@@ -955,6 +1077,14 @@ a.sidebar__header:hover {
 	.main__buttons-btn {
 	    margin-bottom: 1rem;
 	    font-size: .6rem;
+	}
+
+	.sidebar {
+		width: 100%;
+	}
+
+	.sidebar__title {
+		display: none;
 	}
 
 
@@ -971,6 +1101,10 @@ a.sidebar__header:hover {
 		color: #000;
 	}
 
+	.inter__nav {
+        padding: 16px 24px 22px 10px;
+    }
+
     .col-xs-2, .col-sm-2 {
     	width: 16%;
     }
@@ -983,6 +1117,10 @@ a.sidebar__header:hover {
 		float: none;
 	}
 
+	.works2 {
+		padding: 90px 0 50px 0;
+	}
+
 	.works2 .image-block__hover {
 		bottom: 10px;
 	}
@@ -992,7 +1130,10 @@ a.sidebar__header:hover {
 	}
 
 	.works2__subheader {
-		padding: 30px 0 30px 0;
+		padding: 30px 0 0 0;
+	}
+	.works__header2 {
+		margin-top: 50px;
 	}
 
 	.works2__header2 {
@@ -1007,8 +1148,8 @@ a.sidebar__header:hover {
 	.works2__git {
 		text-align: center;
 		background-color: #f5f5f5;
-		padding: 30px 0 50px 0;
-		margin-bottom: 50px;
+		padding: 50px 0 50px 0;
+		margin: 50px 0 50px 0;
 	}
 
 	.works2__git-header {
@@ -1018,6 +1159,10 @@ a.sidebar__header:hover {
 	.principe {
 		background-color: #f5f5f5;
 	}
+
+	.principe__header2 {
+        padding-top: 50px;
+    }
 
 	.principe__mobile {
 		position: relative;
@@ -1033,6 +1178,10 @@ a.sidebar__header:hover {
 		font-size: 1rem;
 		margin-bottom: 50px;
 	}
+
+	.node__container {
+    	padding: 50px 0;
+    }
 
 	.node__image {
 		display: none;
@@ -1068,6 +1217,10 @@ a.sidebar__header:hover {
 		min-height: 100%;
 	}
 
+	.question__input, .question__area {
+        padding: 5px 10px 5px 10px;
+    }
+
 }
 
 
@@ -1096,11 +1249,11 @@ a.sidebar__header:hover {
 
 	.main {
 	    padding-top: 110px;
-	    height: 170%;
+	    height: 160%;
 	}
 
 	.logo img {
-	    width: 38px;
+	    width: 112px;
 	}
 
 	.unav {
@@ -1120,7 +1273,9 @@ a.sidebar__header:hover {
 	}
 
 	.main__subheader {
-	    font-size: 1rem;
+	    font-size: 1.2rem;
+	    padding: 5px;
+	    line-height: 1.5rem;
 	}
     
 	.main__buttons {
@@ -1129,6 +1284,10 @@ a.sidebar__header:hover {
 
 	.image-mobile {
 
+	}
+
+	.works__img1, .works__img2 {
+		display: block;
 	}
 
 	.works2__user-image {
@@ -1148,7 +1307,7 @@ a.sidebar__header:hover {
 	}
 
 	.sidebar {
-        width: 290px;
+        width: 100%;
     }
 
     .inter__header {
