@@ -48,6 +48,28 @@ a:hover {
 	color: #01d1f6;
 }
 
+.scroll-to-top {
+	display: none;
+	width: 60px;
+	height: 60px;
+	border-radius: 30px;
+	background: rgba(255,255,255,.7);
+	position: fixed;
+	right: 40px;
+	bottom: 15px;
+	z-index: 99999;
+	padding: 13px 10px 15px 10px;
+	border: 1px solid #ddd;
+}
+
+.scroll-to-top:hover {
+	cursor: pointer;
+}
+
+.scroll-to-top span {
+	font-size: 30px;
+}
+
 .navbar a:hover {
 	color: #fff;
 }
@@ -302,7 +324,7 @@ a:hover {
 
 .unav__lang {
     color: #fff;
-    margin: 18px 0 0 0;
+    margin: 18px 10px 0 0;
     text-decoration: underline;
     float: right;
     font-size: .7rem;
@@ -479,10 +501,33 @@ a:hover {
 .works {
 	background: rgba(0,0,0,.05);
 	padding-bottom: 40px;
+	height: 840px;
+}
+
+.works__physical {
+	left: 0;
+	top: 5px;
+	padding: 0;
+}
+
+.works__digital {
+	right: 0;
+	bottom: 0;
+	left: auto;
+	padding: 0;
+	text-align: right;
+}
+
+.works__subheader {
+    margin-top: 18px;
+    line-height: 25px;
+}
+
+.works__content {
+	margin-top: 50px;
 }
 
 .works__header2 {
-	padding: 15px;
 	margin-bottom: 5px;
 }
 
@@ -568,9 +613,7 @@ a:hover {
 
 
 .node__container {
-	
 	background-position: center;
-	min-height: 627px;
 }
 
 .node__block-right {
@@ -779,13 +822,14 @@ img.node__ico {
 
 .welcome__header {
 	font-size: 24px;
-	margin-bottom: 44px;
+	margin-bottom: 45px;
 }
 
 .welcome__input {
 	width: 100%;
 	border-radius: 10px;
-	height: 54px;
+	height: 56px;
+	margin-top: -7px;
 }
 
 .welcome__socials svg {
@@ -799,7 +843,7 @@ img.node__ico {
 }
 
 .welcome__subscribe {
-	padding-left: 140px;
+	padding-left: 130px;
 }
 
 .footer {
@@ -850,17 +894,18 @@ img.node__ico {
 
 .footer__right {
 	margin: 6px 0 0 0;
-	padding-left: 95px;
+	padding-left: 100px;
 }
 
 .footer__lang {
     float: none;
-    margin-right: 10px;
+    margin-right: 13px;
 }
 
 .footer__lang svg {
 	float: none;
-	margin-bottom: -9px;
+	margin-bottom: -3px;
+	width: 18px;
 }
 
 .inter, .question {
@@ -1186,13 +1231,21 @@ a.sidebar__header:hover {
 
 .footer__button {
     font-size: 14px;
-    margin-right: 10px;
     height: 40px;
     padding: 0 35px 0 35px;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
 
+}
+
+.footer__button-download {
+    margin-right: 6px;
+    width: 248px;
+}
+
+.footer__button-ask {
+    width: 218px;
 }
 
 .works2__git-btn {
@@ -1240,12 +1293,55 @@ a.footer__lang:hover {
 
 /* media */
 
-@media (min-width: 1400px) {
-  .container {
-    max-width: 1400px;
-    padding-left: 0;
-    padding-right: 0; 
-  }
+@media screen and (max-width: 1440px) {
+
+    .footer__button {
+    	padding: 0 30px 0 30px;
+    }
+
+    .footer__button-download {
+    	width: 210px;
+    	font-size: .8rem;
+    }
+
+    .footer__button-ask {
+    	width: 180px;
+    	font-size: .8rem;
+    }
+
+
+}
+
+@media screen and (min-width: 1400px) {
+
+	.container {
+	    max-width: 1400px;
+	    padding-left: 0;
+	    padding-right: 0; 
+	}
+
+
+
+}
+
+@media screen and (max-width: 1344px){
+
+	.socials {
+	    top: 3rem;
+    }
+
+    .socials_ico {
+        margin: 0 3px 0 3px;
+    }
+
+    .socials_ico svg, .unav-scroll .socials_ico svg {
+        width: 22px;
+    }
+
+    .welcome__socials svg {
+    	width: 40px;
+    }
+
 }
 
 @media screen and (max-width: 1280px){
@@ -1291,6 +1387,14 @@ a.footer__lang:hover {
 	    margin: 100px 0;
     }
 
+    .header2 {
+    	font-size: 26px;
+    }
+
+    .information__header {
+    	margin: 6rem 0 1rem;
+    }
+
     .subheader {
     	font-size: 1rem;
     }
@@ -1330,19 +1434,11 @@ a.footer__lang:hover {
 	}
 
 	.socials {
-	    top: 2.5rem;
-    }
+		top: 2.5rem;
+	}
 
     .socials_ico {
-        margin: 0 3px 0 3px;
-    }
-
-    .socials_ico svg, .unav-scroll .socials_ico svg {
-        width: 20px;
-    }
-
-    .welcome__socials svg {
-    	width: 40px;
+        margin: 0 1px 0 1px;
     }
 
 
@@ -1352,7 +1448,7 @@ a.footer__lang:hover {
 
     .unav__button {
     	width: 189px;
-    	margin: 8px 28px 0 20px;
+    	margin: 8px 14px 0 20px;
     	font-size: .8rem;
     }
 
@@ -1366,7 +1462,7 @@ a.footer__lang:hover {
 
 	.unav__lang {
 		font-size: .75rem;
-		margin: 19px 0 0 0;
+		margin: 19px 14px 0 0;
 	}
 
 	.unav__toggler {
@@ -1405,7 +1501,15 @@ a.footer__lang:hover {
     
     .footer__button{
     	font-size: .6rem;
-    	padding: .7rem 2rem .7rem 2rem;
+    	padding: 0 25px 0 25px;
+    }
+
+    .footer__button-download {
+    	width: 150px;
+    }
+
+    .footer__button-ask {
+    	width: 130px;
     }
 
     .top-border-mobile {
@@ -1425,21 +1529,30 @@ a.footer__lang:hover {
         font-size: .6rem;
     }
 
+    .main__buttons-btn {
+    	width: 33%;
+    	font-size: .6rem;
+    }
+
     .subheader {
-		font-size: 1.1rem;
-		line-height: 1.4rem;
+	    font-size: .6rem;
+	    line-height: .9rem;
+    }
+
+    .header3 {
+    	font-size: 16px;
     }
 
 	.principe__header {
 		font-size: 1rem;
 	}
 
-	.socials_ico {
-	    margin: 0 1px 0 1px;
+	.socials {
+	    display: none;
 	}
 
 	.header2 {
-		font-size: 1.1rem;
+		font-size: 1rem;
 	}
 
 	.principe__header2 {
@@ -1449,6 +1562,52 @@ a.footer__lang:hover {
 	.node__header2 {
 	    font-size: .9rem;
 	}
+
+	.works {
+		height: 650px;
+	}
+
+	.footer__button {
+       font-size: .6rem;
+       padding: 0 5px 0 5px;
+    }
+
+    .footer__button-download {
+       width: 130px;
+    }
+
+    .footer__button-ask {
+       width: 110px;
+    }
+
+}
+
+@media screen and (max-width: 768px){
+
+	.works__header2 {
+		padding-top: 0;
+	}
+
+	.works {
+		height: 540px;
+	}
+
+	.blue-btn {
+       width: 200px;
+       font-size: .7rem;
+    }
+
+    .whatcan__list {
+	    width: 95%;
+	    margin: 50px 0 30px 0;
+	    font-size: .9rem;
+    }
+
+    .whatcan__list li {
+	    padding-bottom: 1rem;
+	    padding-left: .5rem;
+	    font-size: 16px;
+    }
 
 }
 
@@ -1468,6 +1627,7 @@ a.footer__lang:hover {
     .subheader {
     	padding: 10px;
     	font-size: 1rem;
+    	line-height: 1.4rem;
     }
 
 	.navbar-brand {
@@ -1564,6 +1724,22 @@ a.footer__lang:hover {
 		margin-bottom: 30px;
 		display: block;
 	}
+
+	.works {
+        height: 1400px;
+    }
+
+    .works__physical {
+    	position: relative;
+    	text-align: center;
+    	margin-bottom: 40px;
+    }
+
+    .works__digital {
+    	position: relative;
+    	text-align: left;
+    	text-align: center;
+    }
 
     .works2__git, .works2__mobile {
 	    display: block;
@@ -1845,7 +2021,7 @@ a.footer__lang:hover {
 
     .node-mobile__header {
     	font-size: 1.4rem;
-    	margin: 110px 0 40px 0;
+    	margin: 60px 0 40px 0;
 
     }
 

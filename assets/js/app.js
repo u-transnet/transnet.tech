@@ -4,6 +4,26 @@
 
 		setTimeout(getBlocks, 1000);
 
+	    $('.scroll-to-top').click(function(e) {
+
+	        e.preventDefault();
+	        $('html, body').animate({scrollTop: '0px'}, 700);
+
+	    });
+
+	    window.onscroll = function() {
+	      
+	      var pageY = window.pageYOffset || document.documentElement.scrollTop;
+
+	      if( pageY > 50 && $( window ).width() > 414){
+	        $('.scroll-to-top').fadeIn(500);
+	      } else {
+	        $('.scroll-to-top').fadeOut(500);
+	      }
+
+	        
+	    };
+
         var body_position = $('body').css('top');
 		var $animation_elements = $('.animation-element');
 		var $window = $(window);
