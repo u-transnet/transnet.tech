@@ -4,28 +4,135 @@
 
 		setTimeout(getBlocks, 1000);
 
-	    $('.scroll-to-top').click(function(e) {
+	    $( '.scroll-to-top' ).click(function(e) {
 
 	        e.preventDefault();
-	        $('html, body').animate({scrollTop: '0px'}, 700);
+	        $( 'html, body' ).animate({scrollTop: '0px'}, 700);
 
 	    });
+
+	    //var node_width = $( ".node__advantages" ).width();
+
+	    
+
+	    var n = $( '.node__adv-li' ).length	;
+
+	    for (var i = 1; i <= n; i++) {
+	    	$( ".node__progress-list" ).append( '<li class="node__progress-item" data-id="' + i + '">&nbsp;</li>' );
+	    }
+
+	    var node_item_width = node_item_width = 100 / n;
+
+	    //var node_width = Math.ceil(n * node_item_width) + 'px';
+	    $( ".node__adv-list" ).css('width', 20 * n + '%');
+	    $( ".node__adv-li" ).css('width', node_item_width + '%');
+	    $( ".node__progress-item" ).css('width', node_item_width + '%');
+
+	    $( '#adv3').addClass('node__adv-active');
+	    $( '.node__data-li[data-id=3]').show();
+	    $( '.node__progress-item[data-id=3]').addClass('node__progress-active');
+
+	    $( '.node__adv-li' ).click(function(e) {
+
+	    	e.preventDefault();
+	    	var shift = 0;
+	    	id = this.id;
+	    	id = parseInt( id.replace('adv', '') );
+
+	    	if( id > 3){ shift = id - 3; }
+
+	    	if( id > n - 2 ){ 
+	    		shift = n - id - 3 ;
+	    		var left = $( ".node__adv-list" ).css('left');
+	    		left = parseInt( left.replace('px', '') );
+
+	    		if( left < ( n - 2 ) * 20 ){
+	    			$( ".node__adv-list" ).css('left', '-' + 20 * (n - 5) + '%');
+	    		}
+
+	    	}
+
+	    	$( '.node__adv-li' ).removeClass('node__adv-active');
+	    	$( '.node__data-li').hide();
+	    	$( '.node__progress-item').removeClass('node__progress-active');
+
+	    	$( '#' + this.id ).addClass('node__adv-active');
+	        $( '.node__progress-item[data-id=' + id + ']').addClass('node__progress-active');
+	        $( '.node__data-li[data-id=' + id + ']').show();
+
+	    	$( ".node__adv-list" ).css('left', '-' + 20 * shift + '%');
+	    	
+	    });
+
+	    $( '.node__progress-item' ).click(function(e) {
+
+	    	id = $(this).attr('data-id');
+	    	$( '#adv' + id ).trigger('click');
+	  
+	    
+	    });
+
+	    $( '.node__adv-next' ).click(function(e) {
+
+	    	id = $( '.node__adv-active' ).attr('id');
+	    	id = parseInt( id.replace('adv', '') );
+	    	
+	    	if(id < n){ id = id + 1; $( '#adv' + id ).trigger('click'); }
+	  
+	    });
+
+	    $( '.node__adv-prev' ).click(function(e) {
+
+	    	id = $( '.node__adv-active' ).attr('id');
+	    	id = parseInt( id.replace('adv', '') );
+	    	
+	    	if(id > 1){ id = id - 1; $( '#adv' + id ).trigger('click'); }
+	  
+	    });
+
+		$( '.videoplayer' ).click(function(e) {
+
+	    	$(this).fadeOut();
+	  
+	    });
+
+		$( '.video__play' ).click(function(e) {
+
+			var code = $(this ).data('code');
+
+	    	$( '.videoplayer' ).fadeIn();
+	    	$( '.videoplayer__content' ).html('<iframe  class="embed-responsive-item"  src="https://www.youtube.com/embed/' + code + '" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>');
+
+	  
+	    });
+
+		$( '.arrow' ).click(function(e) {
+
+			var anchor = $(this ).data('anchor');
+			var pos = $( '.' + anchor ).offset();
+			 $( 'html, body' ).animate({scrollTop: pos.top - 100 + 'px'}, 700);
+	  
+	    });
+
+	    
+	    
+	    
 
 	    window.onscroll = function() {
 	      
 	      var pageY = window.pageYOffset || document.documentElement.scrollTop;
 
 	      if( pageY > 50 && $( window ).width() > 414){
-	        $('.scroll-to-top').fadeIn(500);
+	        $( '.scroll-to-top' ).fadeIn(500);
 	      } else {
-	        $('.scroll-to-top').fadeOut(500);
+	        $( '.scroll-to-top' ).fadeOut(500);
 	      }
 
 	        
 	    };
 
-        var body_position = $('body').css('top');
-		var $animation_elements = $('.animation-element');
+        var body_position = $( 'body' ).css('top');
+		var $animation_elements = $( '.animation-element' );
 		var $window = $(window);
 		    
 
@@ -141,7 +248,7 @@
 	}
 
 	function getBlocks(){
-
+/*
 		$.ajax({
 		    crossDomain: true,
 		    dataType: 'json',
@@ -163,26 +270,7 @@
             }
 		});
 
-/*
-		var XHR = ("onload" in new XMLHttpRequest()) ? XMLHttpRequest : XDomainRequest;
 
-		var xhr = new XHR();
-
-		// (2) запрос на другой домен :)
-		xhr.open('POST', 'http://188.166.90.74:8000/get_current_block_num', true);
-
-		xhr.setRequestHeader('Content-Type', 'application/json')
-		xhr.setRequestHeader('Access-Control-Allow-Origin', '*')
-
-		xhr.onload = function() {
-		  //alert( this.responseText );
-		}
-
-		xhr.onerror = function() {
-		  //alert( 'Ошибка ' + this.status );
-		}
-
-		xhr.send();
 
 */
 
