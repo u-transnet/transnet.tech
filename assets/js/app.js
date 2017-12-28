@@ -193,7 +193,8 @@
 	    
 	        e.preventDefault();
 	        setLang( $( this ).attr('data-id') );
-	        $( '.unav__cur-lang' ).html(  $( this ).html()  );
+	        $( '.unav__lang-shorten' ).html( $( this ).attr('data-shorten')  );
+	        $( '.unav__lang-full' ).html(  $( this ).html()  );
 
 	    });
 
