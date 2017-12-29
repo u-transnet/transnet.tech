@@ -366,7 +366,7 @@ a:hover {
 .main {
     color: #fff;
     padding-top: 232px;
-    height: 1250px;
+    height: 1292px;
 	width: 100%;
 	background: rgb(30,185,183);
 	background: -moz-linear-gradient(top,  rgba(44,119,150,1) 45%, rgba(30,185,183,1) 100%);
@@ -381,7 +381,7 @@ a:hover {
 	height: 100%;
 	background-size: 100%;
     background-image: url(../images/park.png);
-    background-position: center bottom;
+    background-position: center 368px;
     background-repeat: no-repeat;
 }
 
@@ -607,10 +607,11 @@ a:hover {
 
 .principe__container {
     padding: 0;
+	top: 50%;
+    transform: translate(0,-50%);
 }
 
 .principe__header2 {
-    padding-top: 4.5rem;
     font-size: 24px;
 }
 
@@ -620,7 +621,7 @@ a:hover {
 }
 
 .node__block-right {
-	right:0;
+	right: 4.5%;
 	left: auto;
 	top: 200px;
 	padding: 0;
@@ -808,8 +809,14 @@ img.node__adv-prev:hover, img.node__adv-next:hover {
 
 }
 
+.business__container {
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+
 .business__header2 {
-    margin: 2rem 0 1.5rem 0;
+    margin: 0 0 1.5rem 0;
     font-size: 30px;
 }
 
@@ -961,7 +968,7 @@ img.node__adv-prev:hover, img.node__adv-next:hover {
 
 .welcome__input-field {
 	border: 0;
-	width: 80%;
+	width: 70%;
 	padding: 14px;
 }
 
@@ -989,7 +996,7 @@ img.node__adv-prev:hover, img.node__adv-next:hover {
 
 .footer {
 	background-color: #222;
-    padding: 25px 29px 15px 30px;
+    padding: 25px 0 15px 0;
     color: #fff;
     width: 100%;
     float: left;
@@ -1016,7 +1023,7 @@ img.node__adv-prev:hover, img.node__adv-next:hover {
 }
 
 .footer__list li a {
-	margin: 23px 47px 0 0;
+	margin: 20px 47px 0 0;
 	color: #fff;
 	text-decoration: underline;
     font-family: 'Russo Sans';
@@ -1450,7 +1457,16 @@ a.sidebar__header:hover {
 	font-size: .9rem;
 }
 
+.link-btn {
+    display: none;
+}
 
+.link-btn svg {
+    width: 28px;
+    margin: 1px 0 2px 8px;
+    fill: #fff;
+    float: left;
+}
 
 a.footer__lang:hover {
 	color: #fff;
@@ -1487,10 +1503,33 @@ a.footer__lang:hover {
 
 /* media */
 
+@media screen and (max-width: 1680px) {
+
+    .video__subheader {
+    	font-size: 16px;
+    }
+
+}
+
+
 @media screen and (max-width: 1440px) {
 
     .main {
         height: 1100px;
+    }
+
+	.video__subheader {
+	    font-size: 16px;
+	    padding-bottom: 1rem;
+	}
+
+	.footer__list {
+		margin-left: 10px;
+	}
+
+	.footer__list li a {
+	    margin: 20px 10px 0 0;
+	    font-size: .7rem;
     }
 
     .footer__button {
@@ -1553,13 +1592,9 @@ a.footer__lang:hover {
     }
 
     .principe__header2 {
-        padding-top: 3rem;
         font-size: 24px;
     }
 
-    .business__header2 {
-        margin-top: 1rem;
-    }
 
     .information__header {
         margin-top: 3rem;
@@ -1591,7 +1626,7 @@ a.footer__lang:hover {
     }
 
     .footer__list li a {
-        margin: 23px 17px 0 0;
+        margin: 20px 17px 0 0;
     }
 
 }
@@ -1617,8 +1652,16 @@ a.footer__lang:hover {
 	}
 
 	.main {
-		padding-top: 220px;
-		height: 914px;
+		padding-top: 185px;
+		height: 943px;
+	}
+
+	.main__bg {
+		background-position: center 231px;
+	}
+
+	.main__blockchain {
+		font-size: 15px;
 	}
 
 	.main__blockchain-number {
@@ -1627,7 +1670,7 @@ a.footer__lang:hover {
 
 	.main__header {
 		font-size: 3.6rem;
-		margin-top: 30px;
+		margin-top: 26px;
 	}
 
 	.main__content {
@@ -1641,7 +1684,7 @@ a.footer__lang:hover {
 	}
 
     .main__buttons {
-	    margin: 55px 0;
+	    margin: 54px 0;
     }
 
     .header2 {
@@ -1658,6 +1701,8 @@ a.footer__lang:hover {
 
     .main__subheader {
     	font-size: 20px;
+    	margin-top: 18px;
+    	line-height: 30px;
     }
 
 	.principe__header2 {
@@ -1669,7 +1714,7 @@ a.footer__lang:hover {
 	}
 
 	.sidebar {
-		padding-top: 38px;
+		padding-top: 60px;
 	}
 
 	.sidebar__navbar {
@@ -1715,17 +1760,13 @@ a.footer__lang:hover {
 
     .unav__button {
     	width: 189px;
-    	margin: 8px 14px 0 20px;
+    	margin: 6px 14px 0 20px;
     	font-size: .8rem;
     }
 
 	.unav-scroll .socials {
 		transform: translate(0, -50%);
 	}
-
-	.unav__toggler {
-        top: 240px;
-    }
 
 	.btn {
 		font-size: .7rem;
@@ -1737,8 +1778,12 @@ a.footer__lang:hover {
 	}
 
 	.unav__toggler {
-		margin: 20px 14px 0 0;
-		top: 218px;
+		margin: 15px 12px 0 0;
+		top: 244px;
+	}
+
+	.unav__toggler span {
+		width: 26px;
 	}
 
 	.business__header2 {
@@ -1766,8 +1811,8 @@ a.footer__lang:hover {
     }
 
     .footer__list li a {
-	    margin: 20px 15px 0 0;
-	    font-size: .7rem;
+	    margin: 20px 10px 0 0;
+	    font-size: .65rem;
     }
     
     .footer__button{
@@ -1775,7 +1820,13 @@ a.footer__lang:hover {
     	padding: 0 15px 0 15px;
     }
 
+    .footer__button-download {
+    	width: 35%;
+    }
 
+    .footer__button-ask {
+    	width: 33%;
+    }
 
     .top-border-mobile {
     	border: 0;
@@ -1785,9 +1836,38 @@ a.footer__lang:hover {
 
 @media screen and (max-width: 1200px){
 
+	.header2 {
+		font-size: 23px;
+	}
+
+	.subheader {
+	    font-size: .9rem;
+	}
+
+	.node__block-right {
+        right: 0;
+        top: 100px;
+    }
+
+	.works2 .image-block__hover {
+	    bottom: 30px;
+	}
+
+    .footer__list {
+    	margin-left: 0;
+    }
+
 	.footer__list li a {
 	    margin: 20px 10px 0 0;
-	    font-size: .65rem;
+	    font-size: .5rem;
+	}
+
+	.footer__lang {
+		display: none;
+	}
+
+	.footer__button {
+		width: 48%;
 	}
 
 }
@@ -1797,8 +1877,20 @@ a.footer__lang:hover {
 @media screen and (max-width: 1025px){
 
 	.main {
-		padding-top: 170px;
-	    height: 900px;
+		padding-top: 155px;
+	    height: 871px;
+	}
+
+	.unav {
+		height: auto;
+	}
+
+	.main__bg {
+		background-position: center 239px;
+	}
+
+	.main__buttons {
+	    margin: 66px 0;
 	}
 
     .subheader {
@@ -1807,27 +1899,35 @@ a.footer__lang:hover {
     }
 
     .main__header {
-    	margin-top: 15px;
+    	margin-top: 11px;
     }
 
-    .main__subheader {
-    	font-size: 20px;
-    	line-height: 2rem;
-    	margin-top: 15px;
-    }
+	.main__blockchain {
+	    font-size: 14px;
+	}
+
+	.main__subheader {
+	    font-size: 19px;
+	    line-height: 25px;
+	    margin-top: 19px;
+	}
+
+	.unav__toggler {
+		top: 225px;
+	}
+
+	.sidebar {
+		padding-top: 41px;
+	}
 
     .unav__button {
         width: 149px;
-        margin: 8px 13px 0 10px;
+        margin: 5px 13px 0 10px;
     }
 
     .unav__lang {
         font-size: .6rem;
-        margin-top: 22px;
-    }
-
-    .unav__toggler {
-    	top: 240px;
+        margin-top: 18px;
     }
 
     .main__buttons-btn {
@@ -1835,7 +1935,9 @@ a.footer__lang:hover {
     	font-size: .6rem;
     }
 
-
+	.unav__toggler {
+	    margin: 15px 8px 0 0;
+	}
 
     .header3 {
     	font-size: 16px;
@@ -1856,7 +1958,7 @@ a.footer__lang:hover {
 	.socials-link {
 		display: block;
 		float: right;
-		margin: 15px 50px 0 0;
+		margin: 15px 130px 0 0;
 	    
 	}
 
@@ -1883,8 +1985,12 @@ a.footer__lang:hover {
 		font-size: 1rem;
 	}
 
+	.works2__header2 {
+		margin-bottom: 0;
+	}
+
 	.principe__header2 {
-        padding-top: 3rem;
+        padding-top: 1.5rem;
     }
 
 	.node__header2 {
@@ -1925,29 +2031,66 @@ a.footer__lang:hover {
 	.footer__lang {
 	    display: none;
 	}
+
+	.footer__list {
+		margin-left: 0;
+	}
+
+	.footer__list li a {
+	    margin: 20px 10px 0 0;
+	    font-size: .5rem;
+	}
+
     .videoplayer__content {
 	    width: 90%;
 	    top: 50%;
 	    left: 45%;
     }
 
-    .sidebar {
-        padding-top: 60px;
-    }
+}
+
+@media screen and (max-width: 980px){
+
+	.footer__list {
+		display: none;
+	}
+
+	.main__bg {
+	    background-position: center bottom;
+	}
 
 }
+
+
+@media screen and (max-width: 850px){
+
+	.socials-link {
+		margin-right: 20px;
+	}
+
+}
+
 
 @media screen and (max-width: 768px){
 
 	.main {
-	    padding-top: 180px;
-	    height: 750px;
+	    padding-top: 170px;
+	    height: 842px;
+	}
+
+	.main__header {
+	    margin-top: 28px;
 	}
 
     .main__subheader {
-    	font-size: 16px;
-    	line-height: 2rem;
+	    font-size: 16px;
+	    margin-top: 8px;
+	    line-height: 21px;
     }
+
+	.main__buttons {
+	    margin: 106px 0;
+	}
 
 	.socials-link {
 		display: none;
@@ -2004,7 +2147,7 @@ a.footer__lang:hover {
     }
 
     .welcome {
-        padding: 30px 0 30px 0;
+        padding: 30px;
     }
 
     .welcome__subscribe {
@@ -2032,6 +2175,10 @@ a.footer__lang:hover {
     	width: 50%;
     }
 
+	.footer .container {
+		max-width: 100%;
+	}
+
     .video__button {
     	width: 90%;
     }
@@ -2040,15 +2187,117 @@ a.footer__lang:hover {
         padding: 40px 48px 52px 46px;
     }
 
+	.unav__lang {
+		display: none;
+	}
+
+	.link-btn {
+		display: block;
+        margin-right: 28px;
+	}
+
+	.in-socials a svg {
+		width: 32px;
+		fill: #fff;
+	}
+
+}
+
+
+@media screen and (max-width: 640px){
+
+	.main {
+	    padding-top: 170px;
+	    height: 803px;
+	}
+
+	.main__bg {
+	    background-size: 110%;
+	}
+
+	.main__header {
+        font-size: 45px;
+    	margin-top: 27px;
+    }
+
+	.main__header-version {
+		font-size: 25px;
+		margin-left: 0;
+	}
+
+	.main__subheader {
+	    font-size: 14px;
+	    margin-top: 25px;
+	}
+
+	.footer__logo img {
+        width: 125px;
+    }
+
+	.footer__left {
+		width: 33%;
+	}
+
+	.footer__right {
+		width: 66%;
+		margin: 0;
+	}
+
+	.main__buttons {
+	    margin: 84px 0;
+	}
 
 
 }
 
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 580px){
 
 
+	.footer__button {
+		width: 100%;
+		margin-bottom: 10px;
+		font-size: .8rem;
+	}
 
+	.footer__right {
+        margin: 10px 0 10px 0;
+        padding-left: 0;
+    }
+
+    .footer__left {
+    	display: none;
+    }
+
+    .footer {
+    	padding: 20px 20px 10px 20px;
+    }
+
+}
+
+@media screen and (max-width: 490px){
+
+	.link-btn {
+		display: none;
+	}
+
+	.unav__button-mobile {
+		display: block;	
+	}
+
+    .unav__button-mobile {
+    	float: right;
+    	margin: 10px 13px 0 0;
+    }
+
+    .unav__button-mobile svg {
+    	width: 32px;
+    	fill: #fff;
+    }
+
+    .unav-scroll .unav__button-mobile svg {
+    	fill: #000;
+    }
 
 }
 
@@ -2057,9 +2306,12 @@ a.footer__lang:hover {
 
 	.main {
 	    padding-top: 170px;
-	    height: 1020px;
+	    height: 1120px;
 	}
 
+	.main__bg {
+	    background-position: center bottom;
+	}
 
     .subheader {
     	padding: 10px;
@@ -2079,19 +2331,7 @@ a.footer__lang:hover {
     	display: none;
     }
 
-    .unav__button-mobile {
-    	float: right;
-    	margin: 15px 13px 0 0;
-    }
 
-    .unav__button-mobile svg {
-    	width: 32px;
-    	fill: #fff;
-    }
-
-    .unav-scroll .unav__button-mobile svg {
-    	fill: #000;
-    }
 
     .socials, .logo-image {
     	display: none;
@@ -2416,17 +2656,6 @@ a.footer__lang:hover {
 
 	}
 
-	.footer__button {
-		width: 100%;
-		margin-bottom: 10px;
-		font-size: .8rem;
-	}
-
-	.footer__right {
-        margin: 10px 0 10px 0;
-        padding-left: 0;
-    }
-
     .blue-btn-white {
     	border: 0;
     	-webkit-box-shadow: none;
@@ -2515,6 +2744,7 @@ a.footer__lang:hover {
     	font-size: 1.2rem;
     	margin-top: 20px;
     }
+
 
 }
 
