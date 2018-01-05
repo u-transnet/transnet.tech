@@ -458,20 +458,28 @@ a:hover {
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5)
 }
 
+.main__buttons-content {
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
 .main__buttons-left {
 	border-radius: 5px 0 0 5px;
 	border-right: 0;
-	margin-right: -4px;
+	margin-right: -5px;
 }
 
 .main__buttons-center {
 	width: 286px;
+	border-radius: 0;
+	border-right: 0;
+	border-left: 0;
 }
 
 .main__buttons-right {
 	border-radius: 0 5px 5px 0;
 	border-left: 0;
-	margin-left: -4px;
+	margin-left: -5px;
 }
 
 .main__buttons-btn:hover {
@@ -557,7 +565,7 @@ a:hover {
 }
 
 .works2 {
-	padding-top: 65px;
+	padding-top: 90px;
 }
 
 .works2__container {
@@ -597,7 +605,7 @@ a:hover {
 }
 
 .works2 .image-block__hover {
-	bottom: 80px;
+	bottom: 40px;
 	padding: 0;
 }
 
@@ -633,6 +641,16 @@ a:hover {
 
 .node__header {
 	font-size: 24px;
+	margin-bottom: 2rem;
+}
+
+.node__ul-adv {
+	padding: 0;
+	margin: 0;
+}
+
+.node__ul-adv li {
+	line-height: 160%;
 }
 
 .node__list {
@@ -688,12 +706,12 @@ a:hover {
 
 img.node__adv-image {
  	margin: 0 auto;
- 	width: 60px;
- 	height: 60px;
+ 	width: 80px;
+ 	height: 80px;
  	display: block;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 20px;
  	transition: all .4s ease-in-out;
 }
@@ -767,6 +785,7 @@ img.node__ico {
 
 .node__adv-header {
 	font-size: 24px;
+	margin-top: 3rem;
 }
 
 .node__adv-info {
@@ -816,12 +835,12 @@ img.node__adv-prev:hover, img.node__adv-next:hover {
 
 
 .business__header2 {
-    margin: 0 0 1.5rem 0;
+    margin: 0 0 .5rem 0;
     font-size: 30px;
 }
 
 .information__header {
-	margin: 9rem 0 2.5rem 0;
+	margin: 3rem 0 .5rem 0;
 	font-size: 34px;
 }
 
@@ -859,6 +878,16 @@ img.node__adv-prev:hover, img.node__adv-next:hover {
 
 .information__dist-header {
 	font-size: 30px;
+	padding-bottom: .5rem;
+}
+
+.node-block {
+	padding: 10px 0 50px 0;
+	margin: 10px 0 60px;
+}
+
+.node-block__header {
+	margin-bottom: 5rem;
 }
 
 .whatcan {
@@ -923,7 +952,7 @@ img.node__adv-prev:hover, img.node__adv-next:hover {
 
 .video__play {
 	margin: 0 auto;
-	margin-top: 82px;
+	margin-top: 62px;
 	height: 130px;
 	width: 130px;
 	border-radius: 68px;
@@ -961,7 +990,7 @@ img.node__adv-prev:hover, img.node__adv-next:hover {
 	padding: 2px 2px 0 6px;
 	border: 1px solid #000;
 	width: 100%;
-	border-radius: 10px;
+	border-radius: 5px;
 	height: 56px;
 	margin-top: -7px;
 }
@@ -1468,6 +1497,10 @@ a.sidebar__header:hover {
     float: left;
 }
 
+.unav-scroll .link-btn svg {
+	fill: #000;
+}
+
 a.footer__lang:hover {
 	color: #fff;
 }
@@ -1541,6 +1574,17 @@ a.footer__lang:hover {
     	font-size: .8rem;
     }
 
+    .footer__left {
+    	flex: 0 0 55%;
+    	max-width: 55%;
+    }
+
+    .footer__right {
+    	flex: 0 0 45%;
+    	max-width: 45%;
+    }
+
+
 }
 
 @media screen and (min-width: 1400px) {
@@ -1560,19 +1604,19 @@ a.footer__lang:hover {
 	}
 
 	.socials {
-	    top: 3rem;
-    }
+		top: 20px;
+	}
 
-    .socials_ico {
-        margin: 0 3px 0 3px;
-    }
+	.social__br {
+		display: block;
+	}
 
     .socials_ico svg, .unav-scroll .socials_ico svg {
-        width: 27px;
+        width: 32px;
     }
 
     .welcome__socials svg {
-    	width: 40px;
+    	width: 50px;
     }
 
     .subheader {
@@ -1621,10 +1665,6 @@ a.footer__lang:hover {
 	    width: auto;
 	}
 
-	.footer__logo img {
-        width: 150px;
-    }
-
     .footer__list li a {
         margin: 20px 17px 0 0;
     }
@@ -1638,22 +1678,13 @@ a.footer__lang:hover {
 		width: 165px;
 	}
 
-	.social__br {
-		display: block;
+	.main {
+	    padding-top: 172px;
 	}
-
-    .socials_ico svg, .unav-scroll .socials_ico svg {
-        width: 32px;
-    }
 
 	.main__motto1 {
 		font-size: 1.7rem;
 		padding-top: 0;
-	}
-
-	.main {
-		padding-top: 185px;
-		height: 943px;
 	}
 
 	.main__bg {
@@ -1692,7 +1723,7 @@ a.footer__lang:hover {
     }
 
     .information__header {
-    	margin: 6rem 0 1rem;
+    	margin: 1rem 0 1rem;
     }
 
     .subheader {
@@ -1712,6 +1743,14 @@ a.footer__lang:hover {
 	.principe__subheader {
 		font-size: 1rem;
 	}
+
+	.works__digital {
+        bottom: -50px;
+    }
+
+    .works2__header2 {
+    	margin-bottom: 1rem;
+    }
 
 	.sidebar {
 		padding-top: 60px;
@@ -1753,11 +1792,6 @@ a.footer__lang:hover {
     	display: none;
     }
 
-    .unav {
-    	padding: 1rem 2rem 1rem 2.7rem;
-    	height: 140px;
-    }
-
     .unav__button {
     	width: 189px;
     	margin: 6px 14px 0 20px;
@@ -1773,13 +1807,13 @@ a.footer__lang:hover {
 	}
 
 	.unav__lang {
-		font-size: .75rem;
+		font-size: 12px;
 		margin: 19px 14px 0 0;
 	}
 
 	.unav__toggler {
 		margin: 15px 12px 0 0;
-		top: 244px;
+		top: 230px;
 	}
 
 	.unav__toggler span {
@@ -1787,12 +1821,16 @@ a.footer__lang:hover {
 	}
 
 	.business__header2 {
-	    margin: .5rem 0 1.5rem 0;
+	    margin: .5rem 0 .5rem 0;
 	}
 
 	.information__dist {
 		bottom: 30px;
 	}
+
+	.node-block {
+        padding: 0 0 50px 0;
+    }
 
     .video__subheader {
     	font-size: .9rem;
@@ -1803,33 +1841,105 @@ a.footer__lang:hover {
     }
 
     .welcome__header {
-        font-size: 1.2rem;
+    	margin-bottom: 50px;
+    	font-size: 24px;
+    }
+
+    .welcome__header-unite {
+        margin-bottom: 15px;
     }
 
     .welcome {
-        padding: 120px 0 140px 0;
+        padding: 57px 0 60px 0;
+    }
+
+    .welcome__subscribe {
+        padding-left: 35px;
+    }
+
+    .welcome__socials svg {
+    	margin: 0 4px 0 0;
+    }
+
+    .welcome__input-btn {
+    	width: 53px;
+    }
+
+
+    .footer {
+    	padding: 25px 0 25px 0;
+    }
+
+    .footer__left {
+    	padding-right: 0;
+    }
+
+	.footer__right {
+	    margin: 8px 0 0 0;
+	}
+
+    .footer__logo img {
+    	width: 190px;
+    }
+
+	.footer .container, .welcome .container {
+		max-width: 100%;
+		padding: 0 50px 0 50px;
+	}
+
+	.footer__list {
+        padding: 2px 0; 
     }
 
     .footer__list li a {
-	    margin: 20px 10px 0 0;
-	    font-size: .65rem;
+	    margin: 20px 0 0 24px;
+	    font-size: 12px;
     }
     
     .footer__button{
-    	font-size: .5rem;
+    	font-size: 12px;
     	padding: 0 15px 0 15px;
     }
 
     .footer__button-download {
-    	width: 35%;
+    	width: 200px;
     }
 
     .footer__button-ask {
-    	width: 33%;
+    	width: 175px;
+    }
+
+    .footer__left {
+    	flex: 0 0 52%;
+    	max-width: 52%;
+    }
+
+    .footer__right {
+    	flex: 0 0 47%;
+    	max-width: 47%;
     }
 
     .top-border-mobile {
     	border: 0;
+    }
+
+}
+
+@media screen and (max-width: 1240px){
+
+    .footer__left {
+    	flex: 0 0 60%;
+    	max-width: 60%;
+    }
+
+    .footer__right {
+    	flex: 0 0 40%;
+    	max-width: 40%;
+    }
+
+
+    .footer__lang {
+    	display: none;
     }
 
 }
@@ -1851,19 +1961,6 @@ a.footer__lang:hover {
 
 	.works2 .image-block__hover {
 	    bottom: 30px;
-	}
-
-    .footer__list {
-    	margin-left: 0;
-    }
-
-	.footer__list li a {
-	    margin: 20px 10px 0 0;
-	    font-size: .5rem;
-	}
-
-	.footer__lang {
-		display: none;
 	}
 
 	.footer__button {
@@ -1894,9 +1991,9 @@ a.footer__lang:hover {
 	}
 
     .subheader {
-	    font-size: .6rem;
+	    font-size: 12px;
 	    line-height: .9rem;
-    }
+	}
 
     .main__header {
     	margin-top: 11px;
@@ -1931,8 +2028,7 @@ a.footer__lang:hover {
     }
 
     .main__buttons-btn {
-    	width: 33%;
-    	font-size: .6rem;
+    	width: 28%;
     }
 
 	.unav__toggler {
@@ -1982,7 +2078,7 @@ a.footer__lang:hover {
 	}
 
 	.header2 {
-		font-size: 1rem;
+		font-size: 20px;
 	}
 
 	.works2__header2 {
@@ -1997,10 +2093,18 @@ a.footer__lang:hover {
 	    font-size: .9rem;
 	}
 
+	img.node__adv-image {
+		width: 60px;
+		height: 60px;
+		margin-bottom: 5px;
+	}
+
+
 	.node__adv-active img {
 		height: 90px;
 		width: 90px;
 	}
+
 
 	.node__adv-desc {
 		font-size: 9px;
@@ -2016,16 +2120,15 @@ a.footer__lang:hover {
 	}
 
 	.footer__button {
-       font-size: .6rem;
        padding: 0 5px 0 5px;
     }
 
     .footer__button-download {
-       width: 48%;
+       width: 195px;
     }
 
     .footer__button-ask {
-       width: 48%;
+       width: 200px;
     }
 
 	.footer__lang {
@@ -2047,13 +2150,99 @@ a.footer__lang:hover {
 	    left: 45%;
     }
 
+    .welcome {
+        padding: 20px 0 30px 0;
+    }
+
+	.welcome__header {
+	    margin-bottom: 53px;
+	}
+
+	.welcome__socials svg {
+	    width: 33px;
+	}
+
+	.welcome__header-unite {
+        margin-bottom: 27px;  
+    }
+
+    .welcome__subscribe {
+        padding-left: 15px;
+    }
+
+    .welcome__input {
+    	height: 45px;
+    }
+
+    .welcome__input-btn {
+    	width: 40px;
+    }
+
+	.welcome__input-field {
+	    padding: 8px;
+	}
+
+	.footer {
+        padding: 10px 0 25px 0;
+    }
+
+    .footer .container, .welcome .container {
+        padding: 0 45px 0 45px;
+	}
+
+	.footer__logo {
+		margin-top: 10px;
+	}
+
+	.footer__logo img {
+        width: 120px;
+    }
+
+    .footer__list {
+    	margin-left: 10px;
+    }
+
+    .footer__list li a {
+        margin: 20px 0 0 18px;
+        font-size: 12px;
+    }
+
+    .footer__left {
+    	flex: 0 0 55%;
+    	max-width: 55%;
+    }
+
+    .footer__right {
+    	padding-top: 2px;
+    	padding-left: 0;
+    	flex: 0 0 45%;
+    	max-width: 45%;
+    }
+
 }
 
-@media screen and (max-width: 980px){
+
+@media screen and (max-width: 1010px){
 
 	.footer__list {
 		display: none;
 	}
+
+    .footer__left {
+    	padding: 0;
+    	flex: 0 0 30%;
+    	max-width: 30%;
+    }
+
+    .footer__right {
+    	flex: 0 0 70%;
+    	max-width: 70%;
+    }
+
+}
+
+@media screen and (max-width: 980px){
+
 
 	.main__bg {
 	    background-position: center bottom;
@@ -2092,6 +2281,10 @@ a.footer__lang:hover {
 	    margin: 106px 0;
 	}
 
+	.main__buttons-btn {
+		font-size: 12px;
+	}
+
 	.socials-link {
 		display: none;
 	}
@@ -2113,6 +2306,10 @@ a.footer__lang:hover {
 		height: 540px;
 	}
 
+	.works__digital {
+	    bottom: -40px;
+	}
+
 	.blue-btn {
        width: 200px;
        font-size: .7rem;
@@ -2120,6 +2317,11 @@ a.footer__lang:hover {
 
     .node__block-right {
     	top: 100px;
+    }
+
+    .node__ul-adv {
+    	font-size: 12px;
+    	line-height: 1rem;
     }
 
     .whatcan__list {
@@ -2131,7 +2333,7 @@ a.footer__lang:hover {
     .whatcan__list li {
 	    padding-bottom: 1rem;
 	    padding-left: .5rem;
-	    font-size: 16px;
+	    font-size: 12px;
     }
 
     .information__header {
@@ -2146,9 +2348,21 @@ a.footer__lang:hover {
         padding-top: 1.5rem;
     }
 
-    .welcome {
-        padding: 30px;
+    .welcome .container {
+        padding: 0 50px 0 50px;
     }
+
+    .footer .container {
+        padding: 0 20px 0 50px;
+    }
+
+    .welcome {
+        padding-bottom: 25px;
+    }
+
+	.welcome__socials svg {
+	    margin: 0 8px 0 0;
+	}
 
     .welcome__subscribe {
     	padding-left: 0;
@@ -2162,22 +2376,13 @@ a.footer__lang:hover {
     	display: none;
     }
 
-    .footer__button {
-    	width: 48%;
+    .footer__button-download {
+    	width: 170px;
     }
 
-    .footer__right {
-    	padding: 0;
-    	width: 50%;
+    .footer {
+        padding: 10px 0 25px 20px;
     }
-
-    .footer__left {
-    	width: 50%;
-    }
-
-	.footer .container {
-		max-width: 100%;
-	}
 
     .video__button {
     	width: 90%;
@@ -2212,7 +2417,7 @@ a.footer__lang:hover {
 	}
 
 	.main__bg {
-	    background-size: 110%;
+	    background-size: 99%;
 	}
 
 	.main__header {
@@ -2230,28 +2435,51 @@ a.footer__lang:hover {
 	    margin-top: 25px;
 	}
 
+	.main__content {
+		max-width: 100%;
+	}
+
+	.main__buttons-btn {
+        width: 33%;
+    }
+
+	.header2 {
+		font-size: 20px;
+	}
+
+	.welcome {
+        padding-bottom: 10px;
+    }
+
+    .welcome .container, .footer .container {
+        padding: 0 20px 0 20px;
+    }
+
+
 	.footer__logo img {
         width: 125px;
     }
 
-	.footer__left {
-		width: 33%;
-	}
+    .footer__left {
+    	flex: 0 0 30%;
+    	max-width: 30%;
+    }
 
-	.footer__right {
-		width: 66%;
-		margin: 0;
-	}
-
+    .footer__right {
+    	padding-top: 2px;
+    	padding-left: 0;
+    	flex: 0 0 70%;
+    	max-width: 70%;
+    }
 	.main__buttons {
-	    margin: 84px 0;
+	    margin: 108px 0;
 	}
 
 
 }
 
 
-@media screen and (max-width: 580px){
+@media screen and (max-width: 600px){
 
 
 	.footer__button {
@@ -2263,6 +2491,8 @@ a.footer__lang:hover {
 	.footer__right {
         margin: 10px 0 10px 0;
         padding-left: 0;
+        max-width: 100%;
+        flex: 0 0 100%;
     }
 
     .footer__left {
