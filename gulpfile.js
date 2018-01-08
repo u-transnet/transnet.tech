@@ -50,7 +50,7 @@ gulp.task('minify:html', function() {
 });
 
 gulp.task('images', () =>
-	gulp.src('assets/images/*')
+	gulp.src('assets/images/**/*.*')
 		.pipe(imagemin())
 		.pipe(gulp.dest('public/assets/images'))
 );
