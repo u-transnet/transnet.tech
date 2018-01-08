@@ -4,6 +4,14 @@
 
 		setTimeout(getBlocks, 1000);
 
+		$( 'img' ).each(function() {
+			var data_src = $(this).attr('data-src');
+		  if( data_src ){
+		  	$(this).attr( 'src', data_src);
+		  }
+		});
+ 
+
 	    $( '.scroll-to-top' ).click(function(e) {
 
 	        e.preventDefault();

@@ -1,0 +1,32 @@
+{
+  "name": "transnet.tech",
+  "version": "1.0.0",
+  "description": "transnet.tech",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/u-transnet/transnet.tech.git"
+  },
+  "author": "Eugene Polyakov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/u-transnet/transnet.tech/issues"
+  },
+  "homepage": "https://github.com/u-transnet/transnet.tech#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-debug": "^3.2.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-uglify": "^3.0.0",
+    "run-sequence": "^2.2.1"
+  },
+  "dependencies": {
+    "gulp-htmlmin": "^4.0.0"
+  }
+}

@@ -2,6 +2,8 @@
 
 var dic = {
 
+    // English
+
     'en' : {
         'home' : 'HOME',
         'how_it_works' : 'HOW IT WORKS',
@@ -21,6 +23,8 @@ var dic = {
         'current_block' : 'Current block number'
     },
 
+    //Russian
+    
     'ru' : {
         'home' : 'ГЛАВНАЯ',
         'how_it_works' : 'КАК ВСЁ РАБОТАЕТ',

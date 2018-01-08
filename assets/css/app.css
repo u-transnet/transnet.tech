@@ -1591,8 +1591,8 @@ a.footer__lang:hover {
 
 	.container {
 	    max-width: 1400px;
-	    padding-left: 0;
-	    padding-right: 0; 
+	    padding-left: 15px;
+	    padding-right: 15px; 
 	}
 
 }
@@ -1969,7 +1969,26 @@ a.footer__lang:hover {
 
 }
 
+@media screen and (max-width: 1200px){
 
+	.footer__logo {
+	    margin-top: 10px;
+	}
+
+	.footer__logo img {
+	    width: 120px;
+	}
+
+	.footer__button-ask {
+	    width: 170px;
+	}
+
+
+    .footer__button-download {
+       width: 165;
+    }
+
+}
 
 @media screen and (max-width: 1025px){
 
