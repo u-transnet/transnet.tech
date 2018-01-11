@@ -2,6 +2,14 @@
  
 	$( document ).ready(function() {
 
+		var lang = localStorage.getItem('lang');
+
+		if(!lang){
+		   localStorage.setItem('lang', 'ru');
+		} else {
+			setLang(lang);
+		}
+
 		setTimeout(getBlocks, 1000);
 
 		$( 'img' ).each(function() {
@@ -245,15 +253,19 @@
 
 	function setLang( lang ){
 
+		localStorage.setItem('lang', lang);
+
+		$( '.inter' ).fadeOut();
+
 		$( '.lang' ).each(function( e ) {
 
 		  var lang_key = $( this ).attr( 'data-lang' );
 		  $( this ).html(  dic[lang][lang_key] );
-	      $( '.inter' ).fadeOut();
-
+	      
 		});
-	
 
+		
+	
 	}
 
 	function getBlocks(){
