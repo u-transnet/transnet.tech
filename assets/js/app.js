@@ -10,7 +10,7 @@
 			setLang(lang);
 		}
 
-		setTimeout(getBlocks, 1000);
+		setInterval(getBlocks, 1000);
 
 		$( 'img' ).each(function() {
 			var data_src = $(this).attr('data-src');
