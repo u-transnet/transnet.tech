@@ -10,6 +10,7 @@
 			setLang(lang);
 		}
 
+		getBlocks();
 		setInterval(getBlocks, 3000);
 
 		$( 'img' ).each(function() {
@@ -261,8 +262,6 @@
 	      
 		});
 
-		
-	
 	}
 
 	function getBlocks(){
@@ -283,13 +282,7 @@
             }
 		});
 
-
-
-
-
 	}
-
-
 
 
 })(jQuery);
