@@ -27,9 +27,6 @@
 
 	    });
 
-	    //var node_width = $( ".node__advantages" ).width();
-
-	    
 
 	    var n = $( '.node__adv-li' ).length	;
 
@@ -269,11 +266,11 @@
 	}
 
 	function getBlocks(){
-/*
+
 		$.ajax({
 		    crossDomain: true,
 		    dataType: 'json',
-		    url: 'http://188.166.90.74:8000/get_current_block_num',
+		    url: 'http://transnet.tech:8000/get_current_block_num',
 		    contentType: "application/json",
 		    data: JSON.stringify( {
 		    	is_testnet: true,
@@ -293,7 +290,7 @@
 
 
 
-*/
+
 
 	}
 
