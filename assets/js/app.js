@@ -276,11 +276,6 @@
 		    	is_testnet: true,
 		    	owner_wif: '5JGu6HGDReuT8esoSznB43StL7ZqJKnEkn5vhDrz1QC8CUUcRFA' 
 		    }),
-		      headers: {
-		         "Access-Control-Allow-Origin": "*",
-		         "Access-Control-Allow-Methods": "*",
-		         "Access-Control-Allow-Headers": "*"
-		      },
             type: 'POST',
             success: function(data){
 
