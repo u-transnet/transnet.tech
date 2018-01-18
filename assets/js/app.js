@@ -269,7 +269,7 @@
 		$.ajax({
 		    crossDomain: true,
 		    dataType: 'json',
-		    url: 'http://transnet.tech/get_current_block_num',
+		    url: 'https://transnet.tech/api/get_current_block_num',
 		    contentType: "application/json",
 		    data: JSON.stringify( {
 		    	is_testnet: true,
