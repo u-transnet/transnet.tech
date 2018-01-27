@@ -360,13 +360,10 @@ a:hover {
 
 .main {
     color: #fff;
-    padding-top: 232px;
-    height: 1292px;
+    padding-top: 0px;
+    height: 814px;
 	width: 100%;
-	background: rgb(30,185,183);
-	background: -moz-linear-gradient(top,  rgba(44,119,150,1) 45%, rgba(30,185,183,1) 100%);
-	background: -webkit-linear-gradient(top,  rgba(44,119,150,1) 45%,rgba(30,185,183,1) 100%); 
-	background: linear-gradient(to bottom,  rgba(44,119,150,1) 45%,rgba(30,185,183,1) 100%);
+	background-image: url(../images/bg-fill.jpg);
 }
 
 .main__bg {
@@ -374,14 +371,14 @@ a:hover {
 	margin: 0;
 	width: 100%;
 	height: 100%;
-	background-size: 100%;
-    background-image: url(../images/park.png);
-    background-position: center 280px;
+    background-image: url(../images/bg_.png);
+    background-position: right bottom;
     background-repeat: no-repeat;
 }
 
 .main__content {
     height: 100%;
+    padding-top: 170px;
 }
 
 .main__blockchain {
@@ -401,7 +398,8 @@ a:hover {
 .main__header {
     font-size: 80px;
     font-family: 'Russo Sans';
-    margin: 2px 0 0 0;
+    margin: 60px 0 0 0;
+    line-height: 70px;
 }
 
 .main__header-version {
@@ -420,14 +418,12 @@ a:hover {
 .main__subheader {
     font-size: 30px;
     color: #d3e9ef;
-    margin: 12px 3px 0 0;
+    margin: 24px 3px 0 0;
     line-height: 36px;
 }
 
 .main__buttons {
-	margin: 141px 0;
-	width: 100%;
-	text-align: center;
+	margin: 60px 0 0 0;
 }
 
 .main__buttons-btn {
@@ -472,6 +468,26 @@ a:hover {
 
 .main__buttons-btn:hover {
 	background: rgba(255,255,255,.1);
+}
+
+.theway {
+	height: 190px;
+	background-image: url(../images/bg2.jpg);
+	background-size: 100%;
+	background-position: center bottom;
+}
+
+.theway__content {
+	background: rgba(16,55,83, .86);
+	height: 100%;
+	width: 100%;
+}
+
+.theway__content-text {
+	top: 50%;
+	position: relative;
+    transform: translate(0,-50%);
+    color: #fff;
 }
 
 .arrow {
@@ -1629,12 +1645,22 @@ a.footer__lang:hover {
     }
 
     .main {
-        height: 1070px;
+        height: 650px;
     }
+
+	.main__bg {
+		background-size: 60%;
+		background-position: right bottom;
+	}
 
     .main__subheader {
     	font-size: 26px;
     }
+
+
+	.theway {
+		height: 130px;
+	}
 
     .principe__header2 {
         font-size: 24px;
@@ -1681,17 +1707,13 @@ a.footer__lang:hover {
 		width: 165px;
 	}
 
-	.main {
-	    padding-top: 172px;
+	.main-content {
+	    padding-top: 185px;
 	}
 
 	.main__motto1 {
 		font-size: 1.7rem;
 		padding-top: 0;
-	}
-
-	.main__bg {
-		background-position: center 231px;
 	}
 
 	.main__blockchain {
@@ -1704,7 +1726,11 @@ a.footer__lang:hover {
 
 	.main__header {
 		font-size: 3.6rem;
-		margin-top: 26px;
+		margin-top: 29px;
+	}
+
+	.main__header br {
+		display: none;
 	}
 
 	.main__content {
@@ -1713,12 +1739,22 @@ a.footer__lang:hover {
 	}
 
 	.main__subheader {
-		font-size: 1.1rem;
-		line-height: 2rem;
+		width: 55%;
+    	font-size: 24px;
+    	margin-top: 10px;
+    	line-height: 30px;
+	}
+
+	.main__subheader br {
+		display: none;
 	}
 
     .main__buttons {
-	    margin: 54px 0;
+	    margin: 103px 0 0 0;
+    }
+
+    .main__buttons-btn {
+    	width: 205px;
     }
 
     .header2 {
@@ -1731,12 +1767,6 @@ a.footer__lang:hover {
 
     .subheader {
     	font-size: 1rem;
-    }
-
-    .main__subheader {
-    	font-size: 20px;
-    	margin-top: 18px;
-    	line-height: 30px;
     }
 
 	.principe__header2 {
@@ -1998,20 +2028,30 @@ a.footer__lang:hover {
 @media screen and (max-width: 1025px){
 
 	.main {
-		padding-top: 155px;
-	    height: 871px;
+		padding-top: 0;
+		height: 616px;
+	}
+
+	.main__bg {
+		background-size: 80%;
+		background-position: 290px bottom;
+	}
+
+	.main__content {
+	    padding-top: 160px;
 	}
 
 	.unav {
 		height: auto;
 	}
 
-	.main__bg {
-		background-position: center 239px;
-	}
-
 	.main__buttons {
 	    margin: 66px 0;
+	}
+
+	.main__buttons-btn {
+		background: rgba(125,195,10, .9);
+		border: 1px solid #7dc30a;
 	}
 
     .subheader {
@@ -2021,6 +2061,11 @@ a.footer__lang:hover {
 
     .main__header {
     	margin-top: 11px;
+    	line-height: 60px;
+    }
+
+    .main__header br {
+    	display: block;
     }
 
 	.main__blockchain {
@@ -2030,7 +2075,11 @@ a.footer__lang:hover {
 	.main__subheader {
 	    font-size: 19px;
 	    line-height: 25px;
-	    margin-top: 19px;
+	    margin-top: 25px;
+	}
+
+	.main__subheader br {
+		display: block;
 	}
 
 	.unav__toggler {
@@ -2265,15 +2314,6 @@ a.footer__lang:hover {
 
 }
 
-@media screen and (max-width: 980px){
-
-	.main__bg {
-	    background-position: center bottom;
-	}
-
-}
-
-
 @media screen and (max-width: 850px){
 
 	.socials-link {
@@ -2286,27 +2326,40 @@ a.footer__lang:hover {
 
 @media screen and (max-width: 768px){
 
+	.header2 {
+		font-size: 18px;
+	}
+
 	.main {
-	    padding-top: 170px;
-	    height: 842px;
+	    height: 610px;
+	}
+
+	.main__bg {
+	    background-position: right bottom;
 	}
 
 	.main__header {
-	    margin-top: 28px;
+		margin-top: 26px;
+		line-height: 53px;
 	}
 
     .main__subheader {
 	    font-size: 16px;
-	    margin-top: 8px;
+	    margin-top: 16px;
 	    line-height: 21px;
     }
 
 	.main__buttons {
-	    margin: 106px 0;
+        margin: 86px 0 0 0;
 	}
 
 	.main__buttons-btn {
 		font-size: 12px;
+        width: 33%;
+	}
+
+	.theway {
+		height: 110px;
 	}
 
 	.socials-link {
@@ -2435,18 +2488,26 @@ a.footer__lang:hover {
 
 @media screen and (max-width: 640px){
 
+	.header2 {
+		font-size: 18px;
+	}
+
+	.logo img {
+	    width: 110px;
+	}
+
 	.main {
-	    padding-top: 170px;
-	    height: 803px;
+	    height: 527px;
 	}
 
 	.main__bg {
-	    background-size: 99%;
+	    background-size: 90%;
 	}
 
 	.main__header {
-        font-size: 45px;
-    	margin-top: 27px;
+		font-size: 45px;
+		margin-top: 29px;
+		line-height: 45px;
     }
 
 	.main__header-version {
@@ -2455,21 +2516,22 @@ a.footer__lang:hover {
 	}
 
 	.main__subheader {
-	    font-size: 14px;
-	    margin-top: 25px;
+		font-size: 15px;
+		margin-top: 21px;
 	}
 
 	.main__content {
 		max-width: 100%;
+		padding-top: 130px;
 	}
 
 	.main__buttons-btn {
         width: 33%;
     }
 
-	.header2 {
-		font-size: 20px;
-	}
+    .theway {
+        height: 100px;
+    }
 
 	.welcome {
         padding-bottom: 10px;
@@ -2496,7 +2558,7 @@ a.footer__lang:hover {
     	max-width: 70%;
     }
 	.main__buttons {
-	    margin: 108px 0;
+        margin: 68px 0 0 0;
 	}
 
 
@@ -2560,13 +2622,13 @@ a.footer__lang:hover {
 @media screen and (max-width: 420px){
 
 	.main {
-	    padding-top: 82px;
-	    height: 865px;
+	    padding-top: 60px;
+	    height: 768px;
 	}
 
 	.main__bg {
-        background-position: -70px 190px;
-        background-size: 210%;
+        background-position: -100px 190px;
+        background-size: 160%;
 	}
 
     .subheader {
@@ -2580,13 +2642,13 @@ a.footer__lang:hover {
 	    color: #2c7796;
 	    background-color: #fff;
 	    padding: 2px 7px 2px 8px;
-	    vertical-align: middle;
+	    vertical-align: top;
 	    margin-left: -7px;
 	}
 
 	.main__more {
 	    font-size: 14px;
-	    margin-top: 40px;
+	    margin-top: 39px;
 	    letter-spacing: 1px;
 	}
 
@@ -2608,7 +2670,7 @@ a.footer__lang:hover {
 		display: block;
 	}
 
-    .unav__button, .desktop, .works2__image, .principe__image {
+    .unav__button, .desktop, .works2__image, .principe__image, .theway {
     	display: none;
     }
 
@@ -2652,8 +2714,9 @@ a.footer__lang:hover {
     }
 
     .main__blockchain {
-    	font-size: 14px;
+    	font-size: 10px;
     	line-height: 1rem;
+    	text-align: center;
     }
 
     .main__blockchain-number {
@@ -2668,6 +2731,11 @@ a.footer__lang:hover {
 		margin-top: 16px;
 	    font-size: 44px;
 	    line-height: 44px;
+	    text-align: center;
+	}
+
+	.main__content {
+		padding-top: 23px;
 	}
 
 	.main__buttons-btn {
@@ -2716,7 +2784,7 @@ a.footer__lang:hover {
 	}
 
 	.main__buttons {
-		margin: 360px 0;
+		margin: 287px 0 0 0;
     }
 
 	.main__subheader {
