@@ -919,6 +919,60 @@ img.node__adv-prev:hover, img.node__adv-next:hover {
 	font-size: 16px;
 }
 
+/* More than blockchain section */
+
+.more-than__logo {
+	display: none;
+	height: 83px;
+	width: 83px;
+	margin: 0 auto;
+	margin-top: 60px;
+	clear: both;
+	background-image: url('../images/morethan_logo.jpg');
+}
+
+.more-than__cicle {
+	display: none;
+}
+
+.more-than__bg {
+	background-image: url('../images/morethan.jpg');
+	height: 800px;
+	background-position: center top ;
+	background-repeat: no-repeat;
+}
+
+.more-than__block1 {
+	text-align: right;
+	top: 125px;
+	padding-right: 60px;
+}
+
+.more-than__block2 {
+	text-align: right;
+	top: 330px;
+	padding-right: 60px;
+}
+
+.more-than__block3 {
+	text-align: center;
+	top: 600px;
+}
+
+.more-than__block4 {
+	left: 60px;
+	top: 330px;
+}
+
+.more-than__block5 {
+	top: 125px;
+	left: 60px;
+}
+
+.more-than__header {
+	margin-bottom: 20px;
+}
+
 /* Video section */
 
 .video {
@@ -1865,6 +1919,31 @@ a.footer__lang:hover {
         padding: 0 0 50px 0;
     }
 
+    .more-than {
+    	padding-bottom: 40px;
+    }
+
+    .more-than .image-block__hover {
+    	line-height: 1.4rem;
+    }
+
+    .more-than__header {
+    	font-size: 20px;
+    	margin-bottom: 28px;
+    }
+
+    .more-than__block1 {
+    	top: 98px;
+    }
+
+    .more-than__block3 {
+
+    }
+
+    .more-than__block5 {
+    	top: 98px;
+    }
+
     .video__subheader {
     	font-size: .9rem;
     }
@@ -2192,6 +2271,40 @@ a.footer__lang:hover {
 		height: 650px;
 	}
 
+	.more-than__bg {
+	    background-image: url('../images/morethan_1024.jpg');
+	    height: 800px;
+    }
+
+    .more-than__header {
+    	font-size: 14px;
+    }
+
+    .more-than .image-block__hover {
+    	font-size: 12px;
+    	line-height: 1rem;
+    }
+
+    .more-than__block1 {
+    	top: 175px;
+    }
+
+    .more-than__block2 {
+    	top: 390px;
+    }
+
+    .more-than__block3 {
+    	top: 680px;
+    }
+
+    .more-than__block4 {
+    	top: 390px;
+    }
+
+    .more-than__block5 {
+    	top: 175px;
+    }
+
 	.footer__button {
        padding: 0 5px 0 5px;
     }
@@ -2425,6 +2538,37 @@ a.footer__lang:hover {
         padding-top: 1.5rem;
     }
 
+	.more-than__cicle {
+		height: 19px;
+		width: 19px;
+		position: absolute;
+		left: -25px;
+		top: 20px;
+		background-image: url('../images/blue-circle.jpg');
+	}
+
+    .more-than__logo {
+    	display: block;
+    }
+
+    .more-than__bg {
+    	background-image: none;
+    	position: relative;
+    }
+
+    .more-than .image-block__hover {
+    	display: block;
+    	position: relative;
+    	top: 0;
+    	right: 0;
+    	bottom: 0;
+    	padding: 20px 10px 20px 10px;
+    	margin: 0;
+    	left: 0;
+    	float: left;
+    	text-align: left;
+    }
+
     .welcome .container {
         padding: 0 50px 0 50px;
     }
@@ -2531,6 +2675,15 @@ a.footer__lang:hover {
 
     .theway {
         height: 100px;
+    }
+
+    .more-than__bg {
+    	height: auto;
+    	padding-bottom: 40px;
+    }
+
+    .more-than__cicle {
+    	display: block;
     }
 
 	.welcome {
@@ -2947,6 +3100,15 @@ a.footer__lang:hover {
 
 	.node__list-right {
 		margin: 20px 0;
+	}
+
+	.more-than .image-block__hover {
+		padding-left: 20px;
+
+	}
+
+	.more-than__cicle {
+		left: -5px;
 	}
 
 	.inter {
